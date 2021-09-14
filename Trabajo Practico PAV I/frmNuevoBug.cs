@@ -81,16 +81,18 @@ namespace Trabajo_Practico_PAV_I
                 int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql, parametros);
                 if(resultado == 0)
                 {
-                    MessageBox.Show("Error.");
+                    MessageBox.Show("Error al cargar el Bug.");
                 }
                 else
                 {
-                    MessageBox.Show("Fran puto.");
+                    MessageBox.Show("Carga exitosa del Bug.");
+                    CargarGrilla();
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
+                
             }
         }
 
@@ -118,7 +120,7 @@ namespace Trabajo_Practico_PAV_I
             { 
                 string consulta = "SELECT id_bug, titulo, fecha_alta, id_estado FROM Bugs";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
-
+                grdBugs.DataSource = tabla;
 
                 
 
@@ -127,10 +129,6 @@ namespace Trabajo_Practico_PAV_I
             catch (Exception ex)
             {
                 throw;
-            }
-            finally
-            {
-                
             }
         }
         private void LimpiarCampos()
@@ -146,6 +144,21 @@ namespace Trabajo_Practico_PAV_I
             LlenarCombo(cmbCriticidad, DataManager.GetInstance().ConsultaSQL("Select * from Criticidades"), "nombre", "id_criticidad");
             LlenarCombo(cmbUsuarioAsignado, DataManager.GetInstance().ConsultaSQL("Select * from Usuarios"), "usuario", "id_usuario");
             LlenarCombo(cmbProducto, DataManager.GetInstance().ConsultaSQL("Select * from Productos"), "nombre", "id_producto");
+        }
+
+        private void grdBugs_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            int indice = e.RowIndex;
+            DataGridViewRow filaSeleccionada = grdBugs.Rows[indice];
+            string idBug = filaSeleccionada.Cells["Id"].Value.ToString();
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            {
+                parametros.Add("Id", idBug);
+            }
+            string consulta = "SELECT * FROM Bugs WHERE id_bug LIKE @Id";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, Dictionary);
+
         }
     }
 }
