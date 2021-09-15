@@ -8,13 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajo_Practico_PAV_I.Entidades;
 
 namespace Trabajo_Practico_PAV_I
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        private frmPrincipal padre;
+        public frmLogin(frmPrincipal principal)
         {
+            padre = principal;
             InitializeComponent();
         }
 
@@ -31,9 +34,10 @@ namespace Trabajo_Practico_PAV_I
                     bool resultado = ValidarUsuario(txtNombreUsuario.Text, txtContraseña.Text);
                     if(resultado)
                     {
+                        
+                        /*padre.tomarUsuario(usu);*/
                         this.Close();
-                        
-                        
+                       
                     }
                     else
                     {
@@ -47,7 +51,23 @@ namespace Trabajo_Practico_PAV_I
                 }
             }
         }
-
+        private Usuario getUsuario(string nombreUsuario)
+        {
+            Usuario usu = new Usuario();
+            string consulta = "SELECT * FROM Usuarios WHERE nombre LIKE '" + nombreUsuario + "'";
+            DataTable tabla = new DataTable();
+            tabla = DataManager.GetInstance().ConsultaSQL(consulta);
+            usu.IdUduario = (int)tabla.Rows[0]["id_usuario"];
+            usu.IdPerfil = (int)tabla.Rows[0]["id_perfil"];
+            usu.NombreUsuario = tabla.Rows[0]["usuario"].ToString();
+            usu.Password = tabla.Rows[0]["password"].ToString();
+            usu.Email = tabla.Rows[0]["email"].ToString();
+            usu.Borrado = (int)tabla.Rows[0]["borrado"];
+     
+            return usu;
+            
+            
+        }
         private bool ValidarUsuario(string NombreDeUsuario, string Password)
         {
             bool resultado = false;

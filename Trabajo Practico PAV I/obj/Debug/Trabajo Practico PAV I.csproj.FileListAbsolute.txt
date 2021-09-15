@@ -1,0 +1,12 @@
+C:\Users\juans\source\repos\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe.config
+C:\Users\juans\source\repos\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\source\repos\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.pdb
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csprojAssemblyReference.cache
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmPrincipal.resources
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmLogin.resources
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.Properties.Resources.resources
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.GenerateResource.cache
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
+C:\Users\juans\source\repos\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmNuevoBug.resources
