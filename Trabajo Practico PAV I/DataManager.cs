@@ -10,9 +10,7 @@ public class DataManager
     private string string_conexion;
     public DataManager()
     {
-        string_conexion = "Data Source=DESKTOP-GFG0RPB\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=True";
-        
-
+        string_conexion = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=GestionUsuarios;Integrated Security=True";
     }
     public static DataManager GetInstance()
     {

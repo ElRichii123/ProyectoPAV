@@ -54,35 +54,36 @@
     </Compile>
     <Compile Include="DataManager.cs" />
     <Compile Include="Entidades\Bug.cs" />
+    <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="GUI\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="GUI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="GUI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevoBug.cs">
+    <Compile Include="GUI\frmNuevoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevoBug.Designer.cs">
-      <DependentUpon>frmNuevoBug.cs</DependentUpon>
+    <Compile Include="GUI\frmNuevoPerfil.Designer.cs">
+      <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="GUI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevoBug.resx">
-      <DependentUpon>frmNuevoBug.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmNuevoPerfil.resx">
+      <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
