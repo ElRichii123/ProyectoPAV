@@ -195,7 +195,7 @@ namespace Trabajo_Practico_PAV_I
                     DataGridViewRow filaSeleccionada = grdPerfiles.Rows[indice];
                     string nombre = filaSeleccionada.Cells["nombre"].Value.ToString();
 
-                    string consultaId = "select id_perfil from Perfiles where nombre  = '" + nombre + "' AND borrado = 0";
+                    string consultaId = "select id_perfil from Perfiles where nombre  = '" + nombre + "'";
                     DataTable rtdo = DataManager.GetInstance().ConsultaSQL(consultaId);
                     int id = (int)rtdo.Rows[0]["id_perfil"];
                     parametros.Add("id", id);
