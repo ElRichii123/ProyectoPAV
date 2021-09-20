@@ -10,8 +10,12 @@ public class DataManager
     private string string_conexion;
     public DataManager()
     {
+<<<<<<< HEAD
+        string_conexion = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=GestionUsuarios;Integrated Security=True";
+=======
         string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=True";
         
+>>>>>>> fbd989c6cd8c974dc8448d4a7b9cf4272fbe957d
     }
     public static DataManager GetInstance()
     {
