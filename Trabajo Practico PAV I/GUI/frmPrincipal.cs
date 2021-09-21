@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_Practico_PAV_I.Entidades;
+using Trabajo_Practico_PAV_I.GUI;
 
 namespace Trabajo_Practico_PAV_I
 {
@@ -86,7 +87,15 @@ namespace Trabajo_Practico_PAV_I
         }
         private void modificarPerfil_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                frmNuevoUsuario ventanaNuevoUsuario = new frmNuevoUsuario();
+                ventanaNuevoUsuario.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+            }
         }
 
         private void consultarPerfil_Click(object sender, EventArgs e)
