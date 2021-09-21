@@ -19,6 +19,7 @@ namespace Trabajo_Practico_PAV_I
             Usuario usuario = ConocerUsuario(nombreUsuario);
             lblUsuario.Text = usuario.NombreUsuario.ToString();
             lblPerfil.Text = usuario.Perfil;
+            CargarGrilla(usuario);
         }
         private Usuario ConocerUsuario(string nombreUsuario)
         {
@@ -37,10 +38,25 @@ namespace Trabajo_Practico_PAV_I
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            
             this.CenterToParent();
         }
 
+        private void CargarGrilla(Usuario u)
+        {
+            try
+            {
+                Dictionary<string, object> parametros = new Dictionary<string, object>();
+                parametros.Add("id_perfil", u.IdPerfil);
+                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario JOIN Perfiles P ON P.id_perfil = PP.id_perfil JOIN Usuarios U ON U.id_perfil = P.id_perfil WHERE U.id_perfil = @id_perfil";
+                DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
+                grdPerfiles.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult rpta;

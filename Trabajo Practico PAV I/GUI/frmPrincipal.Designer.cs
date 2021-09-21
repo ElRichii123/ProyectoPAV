@@ -38,7 +38,9 @@ namespace Trabajo_Practico_PAV_I
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
+            this.grdPerfiles = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPerfiles)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -113,11 +115,26 @@ namespace Trabajo_Practico_PAV_I
             this.lblPerfil.TabIndex = 2;
             this.lblPerfil.Text = "label1";
             // 
+            // grdPerfiles
+            // 
+            this.grdPerfiles.AllowUserToAddRows = false;
+            this.grdPerfiles.AllowUserToOrderColumns = true;
+            this.grdPerfiles.AllowUserToResizeRows = false;
+            this.grdPerfiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdPerfiles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdPerfiles.Location = new System.Drawing.Point(99, 104);
+            this.grdPerfiles.Name = "grdPerfiles";
+            this.grdPerfiles.ReadOnly = true;
+            this.grdPerfiles.Size = new System.Drawing.Size(547, 197);
+            this.grdPerfiles.TabIndex = 9;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.grdPerfiles);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStrip1);
@@ -129,6 +146,7 @@ namespace Trabajo_Practico_PAV_I
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPerfiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +163,7 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.DataGridView grdPerfiles;
     }
 }
 

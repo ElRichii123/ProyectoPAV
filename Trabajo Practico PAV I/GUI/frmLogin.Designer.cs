@@ -60,7 +60,7 @@ namespace Trabajo_Practico_PAV_I
             this.txtNombreUsuario.Location = new System.Drawing.Point(141, 33);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreUsuario.TabIndex = 2;
+            this.txtNombreUsuario.TabIndex = 1;
             // 
             // txtContraseña
             // 
@@ -68,14 +68,15 @@ namespace Trabajo_Practico_PAV_I
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.TabIndex = 2;
+            
             // 
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(99, 116);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btnIngresar.TabIndex = 5;
+            this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);

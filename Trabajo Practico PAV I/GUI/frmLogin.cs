@@ -14,7 +14,7 @@ namespace Trabajo_Practico_PAV_I
 {
     public partial class frmLogin : Form
     {
-        private frmPrincipal padre;
+        
         public frmLogin()
         {
             /*padre = principal;*/
@@ -90,5 +90,7 @@ namespace Trabajo_Practico_PAV_I
         {
             Environment.Exit(0);
         }
+
+        
     }
 }
