@@ -28,5 +28,14 @@ namespace Trabajo_Practico_PAV_I.Entidades
             return tabla.Rows[0]["nombre"].ToString();
             }
         }
+        public int ObtenerIdPerfil(string perfil)
+        {
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("perfil", perfil);
+            string consulta = "Select id_perfil from Perfiles where nombre = @perfil";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
+            return (int)tabla.Rows[0]["id_perfil"];
+        }
+        
     }
 }

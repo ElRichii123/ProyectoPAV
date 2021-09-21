@@ -20,6 +20,10 @@ namespace Trabajo_Practico_PAV_I
             Usuario usuario = ConocerUsuario(nombreUsuario);
             lblUsuario.Text = usuario.NombreUsuario.ToString();
             lblPerfil.Text = usuario.Perfil;
+            if(usuario.IdPerfil != 1)
+            {
+                menuSoporte.Enabled = false;
+            }
             CargarGrilla(usuario);
         }
         private Usuario ConocerUsuario(string nombreUsuario)
@@ -85,7 +89,7 @@ namespace Trabajo_Practico_PAV_I
             }
 
         }
-        private void modificarPerfil_Click(object sender, EventArgs e)
+        private void nuevoUsuario_Click(object sender, EventArgs e)
         {
             try
             {
@@ -98,15 +102,7 @@ namespace Trabajo_Practico_PAV_I
             }
         }
 
-        private void consultarPerfil_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eliminarPerfil_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
     }

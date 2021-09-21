@@ -40,17 +40,21 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.cboPerfiles = new System.Windows.Forms.ComboBox();
+            this.lblPerfiles = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(29, 18);
+            this.lblUsuario.Location = new System.Drawing.Point(35, 25);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(103, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(47, 13);
             this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Nombre del Usuario:";
+            this.lblUsuario.Text = "Nombre:";
             // 
             // txtNombreUsuario
             // 
@@ -61,7 +65,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnConsultarUsuario
             // 
-            this.btnConsultarUsuario.Location = new System.Drawing.Point(32, 121);
+            this.btnConsultarUsuario.Location = new System.Drawing.Point(38, 360);
             this.btnConsultarUsuario.Name = "btnConsultarUsuario";
             this.btnConsultarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnConsultarUsuario.TabIndex = 4;
@@ -71,7 +75,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnActualizarUsuario
             // 
-            this.btnActualizarUsuario.Location = new System.Drawing.Point(32, 150);
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(205, 360);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnActualizarUsuario.TabIndex = 5;
@@ -81,7 +85,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnAgregarUsuario
             // 
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(32, 179);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(371, 360);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnAgregarUsuario.TabIndex = 6;
@@ -91,7 +95,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(32, 208);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(514, 360);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnEliminarUsuario.TabIndex = 7;
@@ -107,17 +111,17 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.grdUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdUsuarios.Location = new System.Drawing.Point(257, 66);
+            this.grdUsuarios.Location = new System.Drawing.Point(38, 113);
             this.grdUsuarios.Name = "grdUsuarios";
             this.grdUsuarios.ReadOnly = true;
-            this.grdUsuarios.Size = new System.Drawing.Size(216, 165);
+            this.grdUsuarios.Size = new System.Drawing.Size(578, 176);
             this.grdUsuarios.TabIndex = 8;
-            this.grdUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUsuarios_CellContentClick);
+            this.grdUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUsuarios_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 51);
+            this.label1.Location = new System.Drawing.Point(35, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 26;
@@ -126,31 +130,73 @@ namespace Trabajo_Practico_PAV_I.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 86);
+            this.label2.Location = new System.Drawing.Point(272, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Email del Usuario:";
+            this.label2.Text = "Email:";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(138, 51);
+            this.txtPassword.Location = new System.Drawing.Point(138, 57);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(94, 20);
             this.txtPassword.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(138, 83);
+            this.txtEmail.Location = new System.Drawing.Point(335, 22);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(94, 20);
             this.txtEmail.TabIndex = 3;
+            // 
+            // cboPerfiles
+            // 
+            this.cboPerfiles.FormattingEnabled = true;
+            this.cboPerfiles.Location = new System.Drawing.Point(335, 57);
+            this.cboPerfiles.Name = "cboPerfiles";
+            this.cboPerfiles.Size = new System.Drawing.Size(94, 21);
+            this.cboPerfiles.TabIndex = 28;
+            // 
+            // lblPerfiles
+            // 
+            this.lblPerfiles.AutoSize = true;
+            this.lblPerfiles.Location = new System.Drawing.Point(272, 57);
+            this.lblPerfiles.Name = "lblPerfiles";
+            this.lblPerfiles.Size = new System.Drawing.Size(33, 13);
+            this.lblPerfiles.TabIndex = 29;
+            this.lblPerfiles.Text = "Perfil:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(456, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Estado";
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.AutoCompleteCustomSource.AddRange(new string[] {
+            "activo",
+            "inactivo"});
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(522, 22);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(94, 21);
+            this.cboEstado.TabIndex = 30;
+            
             // 
             // frmNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 293);
+            this.ClientSize = new System.Drawing.Size(738, 442);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboEstado);
+            this.Controls.Add(this.lblPerfiles);
+            this.Controls.Add(this.cboPerfiles);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -165,6 +211,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.Name = "frmNuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoUsuario";
+            this.Load += new System.EventHandler(this.frmNuevoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,5 +231,9 @@ namespace Trabajo_Practico_PAV_I.GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.ComboBox cboPerfiles;
+        private System.Windows.Forms.Label lblPerfiles;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboEstado;
     }
 }

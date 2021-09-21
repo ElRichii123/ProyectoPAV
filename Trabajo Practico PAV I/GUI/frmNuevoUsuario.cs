@@ -19,16 +19,23 @@ namespace Trabajo_Practico_PAV_I.GUI
             CargarGrilla();
             borradoFisicoUsuario();
             btnActualizarUsuario.Enabled = false;
+        }
 
-
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.DataSource = source;
+            cbo.SelectedIndex = -1;
         }
 
         private void btnConsultarUsuario_Click(object sender, EventArgs e)
         {
-            string consulta = "SELECT usuario AS Nombre FROM Usuarios WHERE usuario LIKE '%" + txtNombreUsuario.Text + "%'";
-            /*Dictionary<string, object> parametros = new Dictionary<string, object>();
-            parametros.Add("Nombre",txtNombre.Text);*/
-            grdUsuarios.DataSource = DataManager.GetInstance().ConsultaSQL(consulta);
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("nombre",txtNombreUsuario.Text);
+            string consulta = "SELECT usuario as 'Nombre',id_perfil as 'Perfil', password as 'Contraseña', email as 'Email', estado as 'Estado' from Usuarios WHERE usuario LIKE @nombre";
+            
+            grdUsuarios.DataSource = DataManager.GetInstance().ConsultaSQL(consulta,parametros);
             btnActualizarUsuario.Enabled = false;
         }
         private void CargarGrilla()
@@ -36,7 +43,7 @@ namespace Trabajo_Practico_PAV_I.GUI
 
             try
             {
-                string consulta = "select usuario as 'Nombre' from Usuarios WHERE borrado = 0";
+                string consulta = "SELECT usuario as 'Nombre',id_perfil as 'Perfil', password as 'Contraseña', email as 'Email', estado as 'Estado' from Usuarios WHERE borrado = 0";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
                 grdUsuarios.DataSource = tabla;
             }
@@ -46,11 +53,10 @@ namespace Trabajo_Practico_PAV_I.GUI
             }
         }
 
-        private void grdUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grdUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
                 btnActualizarUsuario.Enabled = true;
                 int indice = e.RowIndex;
                 if (indice == -1)
@@ -60,9 +66,7 @@ namespace Trabajo_Practico_PAV_I.GUI
                 DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
                 string nombre = filaSeleccionada.Cells["Nombre"].Value.ToString();
                 Dictionary<string, object> parametros = new Dictionary<string, object>();
-                {
-                    parametros.Add("Nombre", nombre);
-                }
+                parametros.Add("Nombre", nombre);
                 string consulta = "SELECT * FROM Usuarios WHERE usuario LIKE @nombre";
                 DataTable tabla = new DataTable();
                 tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
@@ -95,19 +99,15 @@ namespace Trabajo_Practico_PAV_I.GUI
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             Usuario nuevoUsuario = new Usuario();
-            nuevoUsuario.IdPerfil = 3;
             nuevoUsuario.NombreUsuario = txtNombreUsuario.Text;
             nuevoUsuario.Password = txtPassword.Text;
             nuevoUsuario.Email = txtEmail.Text;
-            
+            nuevoUsuario.IdPerfil = (int)cboPerfiles.SelectedValue;
             nuevoUsuario.Borrado = 0;
             Dictionary<string, object> parametros = new Dictionary<string, object>();
 
-            parametros.Add("id_perfil", 3);
-
             if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
             {
-                var idEstado = txtNombreUsuario.ToString();
                 parametros.Add("usuario", txtNombreUsuario.Text.ToString());
             }
             else
@@ -117,7 +117,6 @@ namespace Trabajo_Practico_PAV_I.GUI
             }
             if (!string.IsNullOrEmpty(txtPassword.Text))
             {
-                var idEstado = txtPassword.ToString();
                 parametros.Add("password", txtPassword.Text.ToString());
             }
             else
@@ -125,9 +124,19 @@ namespace Trabajo_Practico_PAV_I.GUI
                 MessageBox.Show("Debe escribir una contraseña valida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (!string.IsNullOrEmpty(cboPerfiles.Text))
+            {
+
+                parametros.Add("id_perfil", nuevoUsuario.IdPerfil);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (!string.IsNullOrEmpty(txtEmail.Text))
             {
-                var idEstado = txtEmail.ToString();
+                
                 parametros.Add("email", txtEmail.Text.ToString());
             }
             else
@@ -135,12 +144,18 @@ namespace Trabajo_Practico_PAV_I.GUI
                 MessageBox.Show("Debe escribir un Email valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (!string.IsNullOrEmpty(cboEstado.Text))
+            {
 
-
-            
-            
-            parametros.Add("estado", "Activo");
+                parametros.Add("estado", cboEstado.Text);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             parametros.Add("borrado", 0);
+
             try
             {
                 string consultaSql = "INSERT INTO Usuarios (id_perfil,usuario,password,email,estado,borrado) VALUES (@id_perfil,@usuario,@password,@email,@estado,@borrado)";
@@ -160,6 +175,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
 
             }
         }
@@ -167,6 +183,39 @@ namespace Trabajo_Practico_PAV_I.GUI
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>();
+            if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
+            {
+                var idEstado = txtNombreUsuario.ToString();
+                parametros.Add("nombre", txtNombreUsuario.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(txtPassword.Text))
+            {
+                var idEstado = txtNombreUsuario.ToString();
+                parametros.Add("nombre", txtNombreUsuario.Text.ToString()); 
+            }
+            else
+            {
+                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
+            {
+                var idEstado = txtNombreUsuario.ToString();
+                parametros.Add("nombre", txtNombreUsuario.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
             {
                 var idEstado = txtNombreUsuario.ToString();
@@ -257,5 +306,15 @@ namespace Trabajo_Practico_PAV_I.GUI
             int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql);
         }
 
+        private void frmNuevoUsuario_Load(object sender, EventArgs e)
+        {
+            LlenarCombo(cboPerfiles, DataManager.GetInstance().ConsultaSQL("select * from Perfiles"), "nombre", "id_perfil");
+            cboEstado.Items.Add("activo");
+            cboEstado.Items.Add("inactivo");
+        }
+
+        
+
+        
     }
 }

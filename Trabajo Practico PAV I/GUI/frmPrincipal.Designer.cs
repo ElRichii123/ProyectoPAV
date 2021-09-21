@@ -30,7 +30,7 @@ namespace Trabajo_Practico_PAV_I
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoBug = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +46,7 @@ namespace Trabajo_Practico_PAV_I
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
+            this.menuSoporte,
             this.operacionesToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.ayudaToolStripMenuItem});
@@ -56,28 +56,28 @@ namespace Trabajo_Practico_PAV_I
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Operaciones";
             // 
-            // toolStripMenuItem1
+            // menuSoporte
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuSoporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoBug,
             this.modificarPerfil});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
-            this.toolStripMenuItem1.Text = "Soporte";
+            this.menuSoporte.Name = "menuSoporte";
+            this.menuSoporte.Size = new System.Drawing.Size(60, 20);
+            this.menuSoporte.Text = "Soporte";
             // 
             // nuevoBug
             // 
             this.nuevoBug.Name = "nuevoBug";
-            this.nuevoBug.Size = new System.Drawing.Size(119, 22);
+            this.nuevoBug.Size = new System.Drawing.Size(180, 22);
             this.nuevoBug.Text = "Perfiles";
             this.nuevoBug.Click += new System.EventHandler(this.nuevoPerfil_Click);
             // 
             // modificarPerfil
             // 
             this.modificarPerfil.Name = "modificarPerfil";
-            this.modificarPerfil.Size = new System.Drawing.Size(119, 22);
+            this.modificarPerfil.Size = new System.Drawing.Size(180, 22);
             this.modificarPerfil.Text = "Usuarios";
-            this.modificarPerfil.Click += new System.EventHandler(this.modificarPerfil_Click);
+            this.modificarPerfil.Click += new System.EventHandler(this.nuevoUsuario_Click);
             // 
             // operacionesToolStripMenuItem
             // 
@@ -155,7 +155,7 @@ namespace Trabajo_Practico_PAV_I
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menuSoporte;
         private System.Windows.Forms.ToolStripMenuItem nuevoBug;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ToolStripMenuItem modificarPerfil;
