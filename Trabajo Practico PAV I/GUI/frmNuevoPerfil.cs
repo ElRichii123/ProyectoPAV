@@ -59,25 +59,11 @@ namespace Trabajo_Practico_PAV_I
                 string consulta = "SELECT * FROM Perfiles WHERE nombre LIKE @nombre";
                 DataTable tabla = new DataTable();
                 tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
-                /*Bug b = new Bug();
-                b.Titulo1 = tabla.Rows[0]["titulo"].ToString();
-                b.Descripcion1 = tabla.Rows[0]["descripcion"].ToString();
-                DateTime fecha = DateTime.Parse(tabla.Rows[0]["fecha_alta"].ToString());
-                string fechaSalida = fecha.ToString("g", CultureInfo.CreateSpecificCulture("es-ES"));
-                b.FechaAlta1 = DateTime.Parse(fechaSalida);
-
-                b.IdUsuarioResponsable1 = (int)tabla.Rows[0]["id_usuario_responsable"];
-                b.IdUsuarioAsignado1 = (int)tabla.Rows[0]["id_usuario_asignado"];
-                b.IdProducto1 = (int)tabla.Rows[0]["id_producto"];
-                b.IdPrioridad1 = (int)tabla.Rows[0]["id_prioridad"];
-                b.IdCriticiadad1 = (int)tabla.Rows[0]["id_criticidad"];
-                b.IdEstado1 = (int)tabla.Rows[0]["id_estado"];
-                b.Borrado1 = 0;
-
-                txtNombre.Text = b.Titulo1;*/
+                
 
                 Perfil p = new Perfil();
                 p.NombrePerfil = tabla.Rows[0]["nombre"].ToString();
+                txtNombre.Text = p.NombrePerfil;
             }
             catch(Exception ex)
             {

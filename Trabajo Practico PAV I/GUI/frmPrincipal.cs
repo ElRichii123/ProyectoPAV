@@ -14,17 +14,12 @@ namespace Trabajo_Practico_PAV_I
 {
     public partial class frmPrincipal : Form
     {
+        private Usuario usuario;
         public frmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
-            Usuario usuario = ConocerUsuario(nombreUsuario);
-            lblUsuario.Text = usuario.NombreUsuario.ToString();
-            lblPerfil.Text = usuario.Perfil;
-            if(usuario.IdPerfil != 1)
-            {
-                menuSoporte.Enabled = false;
-            }
-            CargarGrilla(usuario);
+            usuario = ConocerUsuario(nombreUsuario);
+            
         }
         private Usuario ConocerUsuario(string nombreUsuario)
         {
@@ -43,7 +38,13 @@ namespace Trabajo_Practico_PAV_I
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            lblUsuario.Text = usuario.NombreUsuario.ToString();
+            lblPerfil.Text = usuario.Perfil;
+            if (usuario.IdPerfil != 1)
+            {
+                menuSoporte.Enabled = false;
+            }
+            CargarGrilla(usuario);
             this.CenterToParent();
         }
 
@@ -53,7 +54,7 @@ namespace Trabajo_Practico_PAV_I
             {
                 Dictionary<string, object> parametros = new Dictionary<string, object>();
                 parametros.Add("id_perfil", u.IdPerfil);
-                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario JOIN Perfiles P ON P.id_perfil = PP.id_perfil JOIN Usuarios U ON U.id_perfil = P.id_perfil WHERE U.id_perfil = @id_perfil";
+                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario WHERE PP.id_perfil = @id_perfil";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
                 grdPerfiles.DataSource = tabla;
             }
@@ -86,6 +87,7 @@ namespace Trabajo_Practico_PAV_I
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
             }
 
         }
@@ -99,6 +101,7 @@ namespace Trabajo_Practico_PAV_I
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
             }
         }
 

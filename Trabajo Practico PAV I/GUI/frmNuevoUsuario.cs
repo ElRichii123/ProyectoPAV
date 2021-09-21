@@ -33,9 +33,8 @@ namespace Trabajo_Practico_PAV_I.GUI
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("nombre",txtNombreUsuario.Text);
-            string consulta = "SELECT usuario as 'Nombre',id_perfil as 'Perfil', password as 'Contraseña', email as 'Email', estado as 'Estado' from Usuarios WHERE usuario LIKE @nombre";
-            
-            grdUsuarios.DataSource = DataManager.GetInstance().ConsultaSQL(consulta,parametros);
+            string consulta = "SELECT usuario as 'Nombre',id_perfil as 'Perfil', password as 'Contraseña', email as 'Email', estado as 'Estado' from Usuarios WHERE usuario LIKE '%"+ txtNombreUsuario.Text+"%'";
+            grdUsuarios.DataSource = DataManager.GetInstance().ConsultaSQL(consulta);
             btnActualizarUsuario.Enabled = false;
         }
         private void CargarGrilla()
@@ -63,36 +62,32 @@ namespace Trabajo_Practico_PAV_I.GUI
                 {
                     return;
                 }
-                DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
-                string nombre = filaSeleccionada.Cells["Nombre"].Value.ToString();
+
                 Dictionary<string, object> parametros = new Dictionary<string, object>();
-                parametros.Add("Nombre", nombre);
+                parametros.Add("Nombre", txtNombreUsuario.Text);
                 string consulta = "SELECT * FROM Usuarios WHERE usuario LIKE @nombre";
                 DataTable tabla = new DataTable();
                 tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
-                /*Bug b = new Bug();
-                b.Titulo1 = tabla.Rows[0]["titulo"].ToString();
-                b.Descripcion1 = tabla.Rows[0]["descripcion"].ToString();
-                DateTime fecha = DateTime.Parse(tabla.Rows[0]["fecha_alta"].ToString());
-                string fechaSalida = fecha.ToString("g", CultureInfo.CreateSpecificCulture("es-ES"));
-                b.FechaAlta1 = DateTime.Parse(fechaSalida);
 
-                b.IdUsuarioResponsable1 = (int)tabla.Rows[0]["id_usuario_responsable"];
-                b.IdUsuarioAsignado1 = (int)tabla.Rows[0]["id_usuario_asignado"];
-                b.IdProducto1 = (int)tabla.Rows[0]["id_producto"];
-                b.IdPrioridad1 = (int)tabla.Rows[0]["id_prioridad"];
-                b.IdCriticiadad1 = (int)tabla.Rows[0]["id_criticidad"];
-                b.IdEstado1 = (int)tabla.Rows[0]["id_estado"];
-                b.Borrado1 = 0;
+                DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
+                Usuario u = new Usuario();
+                u.NombreUsuario = filaSeleccionada.Cells["Nombre"].Value.ToString();
+                u.IdPerfil = (int)filaSeleccionada.Cells["Perfil"].Value;
+                u.Email = filaSeleccionada.Cells["Email"].Value.ToString();
+                u.Password = filaSeleccionada.Cells["Contraseña"].Value.ToString();
+                u.Estado = filaSeleccionada.Cells["Estado"].Value.ToString();
 
-                txtNombre.Text = b.Titulo1;*/
 
-                Usuario p = new Usuario();
-                p.NombreUsuario = tabla.Rows[0]["usuario"].ToString();
+                txtNombreUsuario.Text = u.NombreUsuario;
+                txtPassword.Text = u.Password;
+                txtEmail.Text = u.Email;
+                cboEstado.Text = u.Estado;
+                cboPerfiles.Text = u.Perfil;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
             }
         }
 
@@ -182,11 +177,23 @@ namespace Trabajo_Practico_PAV_I.GUI
 
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
+            int indice = grdUsuarios.CurrentCell.RowIndex;
+            DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
+            string nombre = filaSeleccionada.Cells["nombre"].Value.ToString();
+            string consultaId = "select id_usuario from Usuarios where usuario  = '" + nombre + "'";
+            DataTable rtdo = DataManager.GetInstance().ConsultaSQL(consultaId);
+            
             Dictionary<string, object> parametros = new Dictionary<string, object>();
+            int id = (int)rtdo.Rows[0]["id_usuario"];
+            parametros.Add("id", id);
+
+            Usuario usuario = new Usuario();
+            usuario.Borrado = 0;
+
             if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
             {
-                var idEstado = txtNombreUsuario.ToString();
-                parametros.Add("nombre", txtNombreUsuario.Text.ToString());
+                usuario.NombreUsuario = nombre;
+                parametros.Add("nombre", usuario.NombreUsuario);
             }
             else
             {
@@ -196,46 +203,50 @@ namespace Trabajo_Practico_PAV_I.GUI
 
             if (!string.IsNullOrEmpty(txtPassword.Text))
             {
-                var idEstado = txtNombreUsuario.ToString();
-                parametros.Add("nombre", txtNombreUsuario.Text.ToString()); 
+                usuario.Password = txtPassword.Text.ToString();
+                parametros.Add("password", txtPassword.Text.ToString()); 
             }
             else
             {
-                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe escribir una contraseña valida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
+            if (!string.IsNullOrEmpty(txtEmail.Text))
             {
-                var idEstado = txtNombreUsuario.ToString();
-                parametros.Add("nombre", txtNombreUsuario.Text.ToString());
+                usuario.Email = txtEmail.Text.ToString();
+                parametros.Add("email", usuario.Email);
             }
             else
             {
-                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe escribir un email valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!string.IsNullOrEmpty(txtNombreUsuario.Text))
+            if (!string.IsNullOrEmpty(cboPerfiles.Text))
             {
-                var idEstado = txtNombreUsuario.ToString();
-                parametros.Add("nombre", txtNombreUsuario.Text.ToString());
+                usuario.IdPerfil = usuario.ObtenerIdPerfil(cboPerfiles.Text.ToString());
+                parametros.Add("id_perfil", usuario.IdPerfil);
+                
             }
             else
             {
-                MessageBox.Show("Debe escribir un nombre valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!string.IsNullOrEmpty(cboEstado.Text))
+            {
+                usuario.Estado = cboEstado.Text.ToString();
+                parametros.Add("estado", usuario.Estado);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int indice = grdUsuarios.CurrentCell.RowIndex;
-            DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
-            string nombre = filaSeleccionada.Cells["nombre"].Value.ToString();
-
-            string consultaId = "select id_usuario from Usuarios where usuario  = '" + nombre + "'";
-            DataTable rtdo = DataManager.GetInstance().ConsultaSQL(consultaId);
-            int id = (int)rtdo.Rows[0]["id_usuario"];
-            parametros.Add("id", id);
-            string consultaSql = "UPDATE Usuarios SET usuario = @nombre  WHERE  id_usuario = @id";
+            
+            string consultaSql = "UPDATE Usuarios SET usuario = @nombre, password = @password, email = @email, id_perfil = @id_perfil, estado = @estado WHERE  id_usuario = @id";
             int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql, parametros);
             if (resultado == 0)
             {
@@ -245,7 +256,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             {
                 MessageBox.Show("Actualizacion exitosa del Usuario.");
                 btnActualizarUsuario.Enabled = false;
-                CargarGrilla();
+                frmNuevoUsuario_Load(sender, e);
             }
         }
 
@@ -311,6 +322,12 @@ namespace Trabajo_Practico_PAV_I.GUI
             LlenarCombo(cboPerfiles, DataManager.GetInstance().ConsultaSQL("select * from Perfiles"), "nombre", "id_perfil");
             cboEstado.Items.Add("activo");
             cboEstado.Items.Add("inactivo");
+            txtNombreUsuario.Text = "";
+            txtPassword.Text = "";
+            txtEmail.Text = "";
+            cboEstado.Text = "";
+            cboPerfiles.Text = "";
+            CargarGrilla();
         }
 
         

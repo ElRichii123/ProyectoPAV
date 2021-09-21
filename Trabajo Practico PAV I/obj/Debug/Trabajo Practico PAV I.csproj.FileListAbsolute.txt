@@ -60,3 +60,16 @@ C:\Users\usuario\source\repos\TPTPT\Trabajo Practico PAV I\obj\Debug\Trabajo Pra
 C:\Users\usuario\source\repos\TPTPT\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
 C:\Users\usuario\source\repos\TPTPT\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
 C:\Users\usuario\source\repos\TPTPT\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe.config
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.pdb
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoUsuario.resources
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmPrincipal.resources
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmLogin.resources
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmNuevoPerfil.resources
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.Properties.Resources.resources
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
+C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb

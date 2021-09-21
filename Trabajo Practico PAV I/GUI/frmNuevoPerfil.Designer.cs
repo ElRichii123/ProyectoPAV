@@ -31,6 +31,7 @@ namespace Trabajo_Practico_PAV_I
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoPerfil));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grdPerfiles = new System.Windows.Forms.DataGridView();
             this.btnAgregarBug = new System.Windows.Forms.Button();
@@ -125,6 +126,7 @@ namespace Trabajo_Practico_PAV_I
             this.Controls.Add(this.grdPerfiles);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNuevoPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Perfil";

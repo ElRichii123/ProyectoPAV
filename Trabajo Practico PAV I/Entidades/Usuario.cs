@@ -18,6 +18,7 @@ namespace Trabajo_Practico_PAV_I.Entidades
         public string NombreUsuario {get; set;}
         public string Password {get; set;}
         public string Email {get; set;}
+        public string Estado { get; set; }
         public int Borrado {get; set; }
         public string Perfil
         {

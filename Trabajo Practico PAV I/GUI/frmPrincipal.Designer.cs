@@ -29,6 +29,7 @@ namespace Trabajo_Practico_PAV_I
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuSoporte = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoBug = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,14 +69,14 @@ namespace Trabajo_Practico_PAV_I
             // nuevoBug
             // 
             this.nuevoBug.Name = "nuevoBug";
-            this.nuevoBug.Size = new System.Drawing.Size(180, 22);
+            this.nuevoBug.Size = new System.Drawing.Size(119, 22);
             this.nuevoBug.Text = "Perfiles";
             this.nuevoBug.Click += new System.EventHandler(this.nuevoPerfil_Click);
             // 
             // modificarPerfil
             // 
             this.modificarPerfil.Name = "modificarPerfil";
-            this.modificarPerfil.Size = new System.Drawing.Size(180, 22);
+            this.modificarPerfil.Size = new System.Drawing.Size(119, 22);
             this.modificarPerfil.Text = "Usuarios";
             this.modificarPerfil.Click += new System.EventHandler(this.nuevoUsuario_Click);
             // 
@@ -138,6 +139,7 @@ namespace Trabajo_Practico_PAV_I
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

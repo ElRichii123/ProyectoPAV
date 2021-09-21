@@ -29,6 +29,7 @@ namespace Trabajo_Practico_PAV_I.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoUsuario));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
@@ -68,7 +69,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.btnConsultarUsuario.Location = new System.Drawing.Point(38, 360);
             this.btnConsultarUsuario.Name = "btnConsultarUsuario";
             this.btnConsultarUsuario.Size = new System.Drawing.Size(102, 23);
-            this.btnConsultarUsuario.TabIndex = 4;
+            this.btnConsultarUsuario.TabIndex = 6;
             this.btnConsultarUsuario.Text = "Consultar Usuario";
             this.btnConsultarUsuario.UseVisualStyleBackColor = true;
             this.btnConsultarUsuario.Click += new System.EventHandler(this.btnConsultarUsuario_Click);
@@ -78,7 +79,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.btnActualizarUsuario.Location = new System.Drawing.Point(205, 360);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(102, 23);
-            this.btnActualizarUsuario.TabIndex = 5;
+            this.btnActualizarUsuario.TabIndex = 7;
             this.btnActualizarUsuario.Text = "Actualizar Usuario";
             this.btnActualizarUsuario.UseVisualStyleBackColor = true;
             this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
@@ -88,7 +89,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.btnAgregarUsuario.Location = new System.Drawing.Point(371, 360);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(102, 23);
-            this.btnAgregarUsuario.TabIndex = 6;
+            this.btnAgregarUsuario.TabIndex = 8;
             this.btnAgregarUsuario.Text = "Agregar Usuario";
             this.btnAgregarUsuario.UseVisualStyleBackColor = true;
             this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
@@ -98,7 +99,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.btnEliminarUsuario.Location = new System.Drawing.Point(514, 360);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(102, 23);
-            this.btnEliminarUsuario.TabIndex = 7;
+            this.btnEliminarUsuario.TabIndex = 9;
             this.btnEliminarUsuario.Text = "Eliminar Usuario";
             this.btnEliminarUsuario.UseVisualStyleBackColor = true;
             this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
@@ -115,7 +116,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.grdUsuarios.Name = "grdUsuarios";
             this.grdUsuarios.ReadOnly = true;
             this.grdUsuarios.Size = new System.Drawing.Size(578, 176);
-            this.grdUsuarios.TabIndex = 8;
+            this.grdUsuarios.TabIndex = 10;
             this.grdUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUsuarios_CellClick);
             // 
             // label1
@@ -156,7 +157,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.cboPerfiles.Location = new System.Drawing.Point(335, 57);
             this.cboPerfiles.Name = "cboPerfiles";
             this.cboPerfiles.Size = new System.Drawing.Size(94, 21);
-            this.cboPerfiles.TabIndex = 28;
+            this.cboPerfiles.TabIndex = 4;
             // 
             // lblPerfiles
             // 
@@ -185,14 +186,13 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.cboEstado.Location = new System.Drawing.Point(522, 22);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(94, 21);
-            this.cboEstado.TabIndex = 30;
-            
+            this.cboEstado.TabIndex = 5;
             // 
             // frmNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 442);
+            this.ClientSize = new System.Drawing.Size(654, 442);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.lblPerfiles);
@@ -208,6 +208,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.Controls.Add(this.btnConsultarUsuario);
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.lblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoUsuario";
