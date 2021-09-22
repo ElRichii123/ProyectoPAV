@@ -81,8 +81,9 @@ namespace Trabajo_Practico_PAV_I
         {
             try
             {
-            frmNuevoPerfil ventanaNuevoPerfil = new frmNuevoPerfil();
-            ventanaNuevoPerfil.ShowDialog();
+                frmNuevoPerfil ventanaNuevoPerfil = new frmNuevoPerfil();
+                ventanaNuevoPerfil.ShowDialog();
+                frmPrincipal_Load(sender, e);
             }
             catch (Exception ex)
             {

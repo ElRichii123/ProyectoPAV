@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Trabajo Practico PAV I",
+    "\\Trabajo Practico PAV I\\GUI"
   ],
-  "SelectedNode": "\\Trabajo Practico PAV I.sln",
+  "SelectedNode": "\\Trabajo Practico PAV I\\GUI\\frmPrincipal.cs",
   "PreviewInSolutionExplorer": false
 }

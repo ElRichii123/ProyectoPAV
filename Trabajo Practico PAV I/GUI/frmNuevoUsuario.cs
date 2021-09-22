@@ -16,6 +16,9 @@ namespace Trabajo_Practico_PAV_I.GUI
         public frmNuevoUsuario()
         {
             InitializeComponent();
+            LlenarCombo(cboPerfiles, DataManager.GetInstance().ConsultaSQL("select * from Perfiles where borrado = 0"), "nombre", "id_perfil");
+            cboEstado.Items.Add("activo");
+            cboEstado.Items.Add("inactivo");
             CargarGrilla();
             borradoFisicoUsuario();
             btnActualizarUsuario.Enabled = false;
@@ -42,7 +45,7 @@ namespace Trabajo_Practico_PAV_I.GUI
 
             try
             {
-                string consulta = "SELECT usuario as 'Nombre',id_perfil as 'Perfil', password as 'Contraseña', email as 'Email', estado as 'Estado' from Usuarios WHERE borrado = 0";
+                string consulta = "SELECT U.usuario as 'Nombre', P.nombre as 'Perfil', U.password as 'Contraseña', U.email as 'Email', U.estado as 'Estado' FROM Usuarios U JOIN Perfiles P ON U.id_perfil = P.id_perfil WHERE U.borrado = 0 ";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
                 grdUsuarios.DataSource = tabla;
             }
@@ -63,16 +66,11 @@ namespace Trabajo_Practico_PAV_I.GUI
                     return;
                 }
 
-                Dictionary<string, object> parametros = new Dictionary<string, object>();
-                parametros.Add("Nombre", txtNombreUsuario.Text);
-                string consulta = "SELECT * FROM Usuarios WHERE usuario LIKE @nombre";
-                DataTable tabla = new DataTable();
-                tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
-
+                
                 DataGridViewRow filaSeleccionada = grdUsuarios.Rows[indice];
                 Usuario u = new Usuario();
                 u.NombreUsuario = filaSeleccionada.Cells["Nombre"].Value.ToString();
-                u.IdPerfil = (int)filaSeleccionada.Cells["Perfil"].Value;
+                u.IdPerfil = u.ObtenerIdPerfil(filaSeleccionada.Cells["Perfil"].Value.ToString());
                 u.Email = filaSeleccionada.Cells["Email"].Value.ToString();
                 u.Password = filaSeleccionada.Cells["Contraseña"].Value.ToString();
                 u.Estado = filaSeleccionada.Cells["Estado"].Value.ToString();
@@ -306,6 +304,7 @@ namespace Trabajo_Practico_PAV_I.GUI
 
 
         }
+
         private void borradoFisicoUsuario()
         {
 
@@ -319,9 +318,6 @@ namespace Trabajo_Practico_PAV_I.GUI
 
         private void frmNuevoUsuario_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cboPerfiles, DataManager.GetInstance().ConsultaSQL("select * from Perfiles"), "nombre", "id_perfil");
-            cboEstado.Items.Add("activo");
-            cboEstado.Items.Add("inactivo");
             txtNombreUsuario.Text = "";
             txtPassword.Text = "";
             txtEmail.Text = "";
