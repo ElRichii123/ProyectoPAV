@@ -79,6 +79,9 @@ public class DataManager
         // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
         SqlConnection dbConnection = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
+       
+           
+        
 
         int rtdo = 0;
 
@@ -113,6 +116,55 @@ public class DataManager
         }
         return rtdo;
     }
+    public int EjecutarSQLTransaccion(string strSql, Dictionary<string, object> prs = null)
+    {
+        // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
+        SqlTransaction sqlTransaction = null;
+        SqlConnection dbConnection = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        
+
+
+
+
+        int rtdo = 0;
+
+        // Try Catch Finally
+        // Trata de ejecutar el código contenido dentro del bloque Try - Catch
+        // Si hay error lo capta a través de una excepción
+        // Si no hubo error
+        try
+        {
+            dbConnection.ConnectionString = string_conexion;
+            dbConnection.Open();
+            sqlTransaction = dbConnection.BeginTransaction("Transaccion");
+
+            cmd.Connection = dbConnection;
+            cmd.CommandType = CommandType.Text;
+            // Establece la instrucción a ejecutar
+            cmd.CommandText = strSql;
+            cmd.Transaction = sqlTransaction;
+
+            //Agregamos a la colección de parámetros del comando los filtros recibidos
+            if (prs != null)
+            {
+                foreach (var item in prs)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
+            }
+
+            // Retorna el resultado de ejecutar el comando
+            rtdo = cmd.ExecuteNonQuery();
+            sqlTransaction.Commit();
+        }
+        catch (Exception ex)
+        {
+            sqlTransaction.Rollback();
+            throw ex;
+        }
+        return rtdo;
+    }
 
 
     /// Resumen:
@@ -142,7 +194,9 @@ public class DataManager
         {
             throw (ex);
         }
+
     }
+
 
 }
 

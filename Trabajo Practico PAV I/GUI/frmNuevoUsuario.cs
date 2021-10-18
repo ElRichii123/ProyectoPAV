@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -91,6 +92,7 @@ namespace Trabajo_Practico_PAV_I.GUI
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
+            
             Usuario nuevoUsuario = new Usuario();
             nuevoUsuario.NombreUsuario = txtNombreUsuario.Text;
             nuevoUsuario.Password = txtPassword.Text;
@@ -152,7 +154,8 @@ namespace Trabajo_Practico_PAV_I.GUI
             try
             {
                 string consultaSql = "INSERT INTO Usuarios (id_perfil,usuario,password,email,estado,borrado) VALUES (@id_perfil,@usuario,@password,@email,@estado,@borrado)";
-                int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql, parametros);
+                int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
+                
                 if (resultado == 0)
                 {
                     MessageBox.Show("Error al cargar el Usuario.");

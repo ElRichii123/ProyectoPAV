@@ -73,3 +73,16 @@ C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\De
 C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
 C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
 C:\Users\usuario\source\repos\GrupoMartinezPaezPAV\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe.config
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.pdb
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csprojAssemblyReference.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoUsuario.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmPrincipal.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmLogin.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmNuevoPerfil.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.Properties.Resources.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.GenerateResource.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
