@@ -44,17 +44,17 @@ namespace Trabajo_Practico_PAV_I
             {
                 menuSoporte.Enabled = false;
             }
-            CargarGrilla(usuario);
+            
             this.CenterToParent();
         }
 
-        private void CargarGrilla(Usuario u)
+        /*private void CargarGrilla(Usuario u)
         {
             try
             {
                 Dictionary<string, object> parametros = new Dictionary<string, object>();
                 parametros.Add("id_perfil", u.IdPerfil);
-                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario WHERE PP.id_perfil = @id_perfil";
+                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario WHERE PP.id_perfil = @id_perfil AND F.borrado = 0";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
                 grdPerfiles.DataSource = tabla;
             }
@@ -62,7 +62,7 @@ namespace Trabajo_Practico_PAV_I
             {
                 throw ex;
             }
-        }
+        }*/
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult rpta;
@@ -106,9 +106,19 @@ namespace Trabajo_Practico_PAV_I
             }
         }
 
-        
-
-        
+        private void nuevoFormulario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmNuevoFormulario ventanaNuevoFormulario = new frmNuevoFormulario(usuario);
+                ventanaNuevoFormulario.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
+            }
+        }
     }
 
 }
