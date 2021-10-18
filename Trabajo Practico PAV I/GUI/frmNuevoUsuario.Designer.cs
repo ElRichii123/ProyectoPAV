@@ -182,6 +182,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.cboEstado.AutoCompleteCustomSource.AddRange(new string[] {
             "activo",
             "inactivo"});
+            this.cboEstado.Enabled = false;
             this.cboEstado.FormattingEnabled = true;
             this.cboEstado.Location = new System.Drawing.Point(522, 22);
             this.cboEstado.Name = "cboEstado";

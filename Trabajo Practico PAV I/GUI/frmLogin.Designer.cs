@@ -58,6 +58,7 @@ namespace Trabajo_Practico_PAV_I
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Location = new System.Drawing.Point(141, 33);
+            this.txtNombreUsuario.MaxLength = 50;
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtNombreUsuario.TabIndex = 1;
@@ -65,11 +66,11 @@ namespace Trabajo_Practico_PAV_I
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(140, 62);
+            this.txtContraseña.MaxLength = 50;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 2;
-            
             // 
             // btnIngresar
             // 
