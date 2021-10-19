@@ -88,3 +88,5 @@ C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\
 C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoUsuario.resources
 C:\Users\usuario\source\repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoFormulario.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoFormulario.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.HistorialPermisos.resources

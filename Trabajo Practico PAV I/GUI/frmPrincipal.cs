@@ -19,7 +19,22 @@ namespace Trabajo_Practico_PAV_I
         {
             InitializeComponent();
             usuario = ConocerUsuario(nombreUsuario);
-            
+            CargarGrilla();
+        }
+        private void CargarGrilla()
+        {
+            try
+            {
+                Dictionary<string, object> parametros = new Dictionary<string, object>();
+                parametros.Add("id_perfil", usuario.IdPerfil);
+                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario WHERE PP.id_perfil = @id_perfil AND F.borrado = 0";
+                DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
+                grdPerfiles.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         private Usuario ConocerUsuario(string nombreUsuario)
         {
@@ -119,6 +134,22 @@ namespace Trabajo_Practico_PAV_I
                 throw ex;
             }
         }
+
+        private void historialPermisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HistorialPermisos ventanaHistorialPermisos = new HistorialPermisos();
+                ventanaHistorialPermisos.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
+            }
+        }
+
+        
     }
 
 }

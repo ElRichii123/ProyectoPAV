@@ -86,6 +86,12 @@
     <Compile Include="GUI\frmNuevoPerfil.Designer.cs">
       <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HistorialPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HistorialPermisos.Designer.cs">
+      <DependentUpon>HistorialPermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmNuevoFormulario.resx">
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNuevoPerfil.resx">
       <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HistorialPermisos.resx">
+      <DependentUpon>HistorialPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
