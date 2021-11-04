@@ -155,7 +155,9 @@ namespace Trabajo_Practico_PAV_I.GUI
             {
                 string consultaSql = "INSERT INTO Usuarios (id_perfil,usuario,password,email,estado,borrado) VALUES (@id_perfil,@usuario,@password,@email,@estado,@borrado)";
                 int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
+
                 
+
                 if (resultado == 0)
                 {
                     MessageBox.Show("Error al cargar el Usuario.");
@@ -183,10 +185,19 @@ namespace Trabajo_Practico_PAV_I.GUI
             string nombre = filaSeleccionada.Cells["nombre"].Value.ToString();
             string consultaId = "select id_usuario from Usuarios where usuario  = '" + nombre + "'";
             DataTable rtdo = DataManager.GetInstance().ConsultaSQL(consultaId);
-            
+
+            string consultaPerfil = "select id_perfil from Usuarios where usuario  = '" + nombre + "'";
+            DataTable rtdo2 = DataManager.GetInstance().ConsultaSQL(consultaPerfil);
+
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             int id = (int)rtdo.Rows[0]["id_usuario"];
+            int perfil = (int)rtdo2.Rows[0]["id_perfil"];
+            bool cambioPerfil = false;
             parametros.Add("id", id);
+
+            String fecha1 = fechaYHoraActual();
+
+            parametros.Add("fecha", fecha1);
 
             Usuario usuario = new Usuario();
             usuario.Borrado = 0;
@@ -227,6 +238,10 @@ namespace Trabajo_Practico_PAV_I.GUI
             if (!string.IsNullOrEmpty(cboPerfiles.Text))
             {
                 usuario.IdPerfil = usuario.ObtenerIdPerfil(cboPerfiles.Text.ToString());
+                if(perfil != usuario.IdPerfil)
+                {
+                    cambioPerfil = true;
+                }
                 parametros.Add("id_perfil", usuario.IdPerfil);
                 
             }
@@ -245,14 +260,28 @@ namespace Trabajo_Practico_PAV_I.GUI
                 MessageBox.Show("Debe seleccionar un estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             
+
             string consultaSql = "UPDATE Usuarios SET usuario = @nombre, password = @password, email = @email, id_perfil = @id_perfil, estado = @estado WHERE  id_usuario = @id";
             int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql, parametros);
-            if (resultado == 0)
+
+            
+            
+            if (cambioPerfil)
+            {
+                string consultaSql2 = "INSERT INTO HistorialPerfilesUsuarios(id_usuario,id_perfil,fecha) VALUES (@id,@id_perfil,@fecha)";
+                int resultado2 = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql2, parametros);
+                if (resultado2 == 0)
+                {
+                    MessageBox.Show("Error al actualizar el Usuario.");
+                }
+            }
+            
+            if (resultado == 0 )
             {
                 MessageBox.Show("Error al actualizar el Usuario.");
             }
+            
             else
             {
                 MessageBox.Show("Actualizacion exitosa del Usuario.");
@@ -260,7 +289,13 @@ namespace Trabajo_Practico_PAV_I.GUI
                 frmNuevoUsuario_Load(sender, e);
             }
         }
-
+        private String fechaYHoraActual()
+        {
+            string Date = DateTime.Now.ToString("yyyy-MM-dd");
+            string datetime = DateTime.Now.ToString("Thh:mm:ss");
+            Date = Date + datetime;
+            return Date;
+        }
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>();

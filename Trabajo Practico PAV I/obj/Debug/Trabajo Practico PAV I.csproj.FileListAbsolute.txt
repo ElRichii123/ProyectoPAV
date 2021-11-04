@@ -90,3 +90,4 @@ C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debu
 C:\Users\usuario\source\repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoFormulario.resources
 C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoFormulario.resources
 C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.HistorialPermisos.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmHistorialPerfilesUsuarios.resources

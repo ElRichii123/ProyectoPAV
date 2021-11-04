@@ -8,24 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Trabajo_Practico_PAV_I
+namespace Trabajo_Practico_PAV_I.GUI
 {
-    public partial class HistorialPermisos : Form
+    public partial class frmHistorialPerfilesUsuarios : Form
     {
-        public HistorialPermisos()
+        public frmHistorialPerfilesUsuarios()
         {
             InitializeComponent();
             CargarGrilla();
         }
+
         private void CargarGrilla()
         {
             try
             {
 
 
-                string consulta = "Select H.fecha as 'Fecha', F.nombre as 'Nombre Formulario',P.nombre as 'Nombre Perfil', H.estado as 'Estado' from HistorialPermisos H JOIN Formularios F ON H.id_formulario = F.id_formulario JOIN Perfiles P ON P.id_perfil = H.id_perfil";
+                string consulta = "SELECT U.usuario as 'Ususario', P.nombre as 'Perfil', H.fecha as 'Fecha' FROM HistorialPerfilesUsuarios H JOIN Usuarios U ON h.id_usuario = U.id_usuario JOIN Perfiles P ON P.id_perfil = U.id_perfil";
                 DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
-                grdHistorialPermisos.DataSource = tabla;
+                grdHistorialPerfilesUsuarios.DataSource = tabla;
             }
             catch (Exception ex)
             {
@@ -33,6 +34,6 @@ namespace Trabajo_Practico_PAV_I
             }
         }
 
-        
+
     }
 }

@@ -36,12 +36,13 @@ namespace Trabajo_Practico_PAV_I
             this.modificarPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.grdPerfiles = new System.Windows.Forms.DataGridView();
-            this.historialPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialPerfilesDelUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPerfiles)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +87,8 @@ namespace Trabajo_Practico_PAV_I
             // 
             this.operacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formulariosToolStripMenuItem,
-            this.historialPermisosToolStripMenuItem});
+            this.historialPermisosToolStripMenuItem,
+            this.historialPerfilesDelUsuarioToolStripMenuItem});
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
             this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
@@ -94,9 +96,16 @@ namespace Trabajo_Practico_PAV_I
             // formulariosToolStripMenuItem
             // 
             this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
-            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.formulariosToolStripMenuItem.Text = "Formularios";
             this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.nuevoFormulario_Click);
+            // 
+            // historialPermisosToolStripMenuItem
+            // 
+            this.historialPermisosToolStripMenuItem.Name = "historialPermisosToolStripMenuItem";
+            this.historialPermisosToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.historialPermisosToolStripMenuItem.Text = "HistorialPermisos";
+            this.historialPermisosToolStripMenuItem.Click += new System.EventHandler(this.historialPermisosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -109,7 +118,6 @@ namespace Trabajo_Practico_PAV_I
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            
             // 
             // lblUsuario
             // 
@@ -143,12 +151,12 @@ namespace Trabajo_Practico_PAV_I
             this.grdPerfiles.Size = new System.Drawing.Size(326, 246);
             this.grdPerfiles.TabIndex = 10;
             // 
-            // historialPermisosToolStripMenuItem
+            // historialPerfilesDelUsuarioToolStripMenuItem
             // 
-            this.historialPermisosToolStripMenuItem.Name = "historialPermisosToolStripMenuItem";
-            this.historialPermisosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.historialPermisosToolStripMenuItem.Text = "HistorialPermisos";
-            this.historialPermisosToolStripMenuItem.Click += new System.EventHandler(this.historialPermisosToolStripMenuItem_Click);
+            this.historialPerfilesDelUsuarioToolStripMenuItem.Name = "historialPerfilesDelUsuarioToolStripMenuItem";
+            this.historialPerfilesDelUsuarioToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.historialPerfilesDelUsuarioToolStripMenuItem.Text = "Historial Perfiles del Usuario";
+            this.historialPerfilesDelUsuarioToolStripMenuItem.Click += new System.EventHandler(this.historialPerfilesDelUsuarioToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -188,6 +196,7 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
         private System.Windows.Forms.DataGridView grdPerfiles;
         private System.Windows.Forms.ToolStripMenuItem historialPermisosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialPerfilesDelUsuarioToolStripMenuItem;
     }
 }
 

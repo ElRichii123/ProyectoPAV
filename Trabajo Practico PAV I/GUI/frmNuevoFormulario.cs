@@ -70,7 +70,7 @@ namespace Trabajo_Practico_PAV_I.GUI
                 return;
             }
             parametros.Add("borrado", 0);
-
+            
             String a = fechaYHoraActual();
 
             parametros.Add("fecha", a);
@@ -79,7 +79,7 @@ namespace Trabajo_Practico_PAV_I.GUI
                 string consultaSql = "INSERT INTO Permisos (id_formulario,id_perfil,borrado) VALUES (@id_formulario,@id_perfil,@borrado)";
                 int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
 
-                string consultaSql2 = "INSERT INTO HistorialPermisos (id_formulario,id_perfil,fecha) VALUES (@id_formulario,@id_perfil,@fecha)";
+                string consultaSql2 = "INSERT INTO HistorialPermisos (id_formulario,id_perfil,fecha,estado) VALUES (@id_formulario,@id_perfil,@fecha,'ACTIVO')";
                 int resultado2 = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql2, parametros);
 
                 if (resultado == 0 || resultado2 == 0)
@@ -130,6 +130,8 @@ namespace Trabajo_Practico_PAV_I.GUI
 
                 parametros.Add("id_formulario", cmbNombreForm.SelectedValue);
                 parametros.Add("id_perfil", cmbPerfil.SelectedValue);
+                String a = fechaYHoraActual();
+                parametros.Add("fecha", a);
                 DialogResult rpta;
                 rpta = MessageBox.Show("¿Seguro que desea eliminar el permiso seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rpta == DialogResult.No)
@@ -138,14 +140,15 @@ namespace Trabajo_Practico_PAV_I.GUI
                 }
                 else
                 {
-                    DataGridViewRow filaSeleccionada = grdPermisos.Rows[indice];
-                    string nombre = filaSeleccionada.Cells["nombre"].Value.ToString();
+                    
                     
                    
                     
                     string consultaSql = "UPDATE Permisos SET borrado = 1  WHERE  id_perfil = @id_perfil AND id_formulario = @id_formulario";
-                    int resultado = DataManager.GetInstance().EjecutarSQL(consultaSql, parametros);
-                    if (resultado == 0)
+                    int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
+                    string consultaSql2 = "INSERT INTO HistorialPermisos (id_formulario,id_perfil,fecha,estado) VALUES (@id_formulario,@id_perfil,@fecha,'DE BAJA')";
+                    int resultado2 = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql2, parametros);
+                    if (resultado == 0 || resultado2 == 0)
                     {
                         MessageBox.Show("Error al eliminar el Permiso.");
                     }

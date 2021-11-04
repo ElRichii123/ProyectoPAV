@@ -149,7 +149,19 @@ namespace Trabajo_Practico_PAV_I
             }
         }
 
-        
+        private void historialPerfilesDelUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmHistorialPerfilesUsuarios ventanaHistorialPerfilesUsuarios = new frmHistorialPerfilesUsuarios();
+                ventanaHistorialPerfilesUsuarios.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
+            }
+        }
     }
 
 }
