@@ -57,7 +57,7 @@ namespace Trabajo_Practico_PAV_I
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(611, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(3, 513);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(35, 13);
             this.lblUsuario.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Trabajo_Practico_PAV_I
             // lblPerfil
             // 
             this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Location = new System.Drawing.Point(661, 9);
+            this.lblPerfil.Location = new System.Drawing.Point(44, 513);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(35, 13);
             this.lblPerfil.TabIndex = 2;
@@ -276,7 +276,6 @@ namespace Trabajo_Practico_PAV_I
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.btnAdministrar);
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuAdministrar);
@@ -284,19 +283,20 @@ namespace Trabajo_Practico_PAV_I
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuOperaciones);
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuReportes);
+            this.flowLayoutPanel1.Controls.Add(this.lblUsuario);
+            this.flowLayoutPanel1.Controls.Add(this.lblPerfil);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 602);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 571);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // panelChildForm
             // 
             this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(148, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(154, 3);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(761, 602);
+            this.panelChildForm.Size = new System.Drawing.Size(743, 568);
             this.panelChildForm.TabIndex = 12;
             // 
             // frmPrincipal
@@ -304,11 +304,9 @@ namespace Trabajo_Practico_PAV_I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(909, 602);
+            this.ClientSize = new System.Drawing.Size(909, 566);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.lblPerfil);
-            this.Controls.Add(this.lblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -319,8 +317,8 @@ namespace Trabajo_Practico_PAV_I
             this.pnlSubMenuOperaciones.ResumeLayout(false);
             this.pnlSubMenuAdministrar.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
