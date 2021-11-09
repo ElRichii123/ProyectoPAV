@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_Practico_PAV_I.Entidades;
 using Trabajo_Practico_PAV_I.GUI;
+using Trabajo_Practico_PAV_I.GUI.Reportes.ReporteUsXPerfil;
 
 namespace Trabajo_Practico_PAV_I
 {
@@ -18,24 +19,58 @@ namespace Trabajo_Practico_PAV_I
         public frmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
+            hideSubMenu();
             usuario = ConocerUsuario(nombreUsuario);
-            CargarGrilla();
+            
         }
-        private void CargarGrilla()
+
+        private void hideSubMenu()
         {
-            try
-            {
-                Dictionary<string, object> parametros = new Dictionary<string, object>();
-                parametros.Add("id_perfil", usuario.IdPerfil);
-                string consulta = "SELECT F.nombre AS 'Nombre' FROM Formularios F JOIN Permisos PP ON F.id_formulario = PP.id_formulario WHERE PP.id_perfil = @id_perfil AND F.borrado = 0";
-                DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
-                grdPerfiles.DataSource = tabla;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            pnlSubMenuAdministrar.Visible = false;
+            pnlSubMenuOperaciones.Visible = false;
+            pnlSubMenuReportes.Visible = false;
         }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+        private void btnAdministrar_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuAdministrar);
+        }
+        private void btnOperaciones_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuOperaciones);
+        }
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubMenuReportes);
+        }
+
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+        }
+
+        
         private Usuario ConocerUsuario(string nombreUsuario)
         {
             Usuario usu = new Usuario();
@@ -55,9 +90,11 @@ namespace Trabajo_Practico_PAV_I
         {
             lblUsuario.Text = usuario.NombreUsuario.ToString();
             lblPerfil.Text = usuario.Perfil;
+            openChildFormInPanel(new frmFormsAcces(usuario));
+
             if (usuario.IdPerfil != 1)
             {
-                menuSoporte.Enabled = false;
+               btnAdministrar.Enabled = false;
             }
             
             this.CenterToParent();
@@ -96,23 +133,29 @@ namespace Trabajo_Practico_PAV_I
         {
             try
             {
-                frmNuevoPerfil ventanaNuevoPerfil = new frmNuevoPerfil();
+                
+                openChildFormInPanel(new frmNuevoPerfil());
+                
+                /*frmNuevoPerfil ventanaNuevoPerfil = new frmNuevoPerfil();
                 ventanaNuevoPerfil.ShowDialog();
-                frmPrincipal_Load(sender, e);
+                frmPrincipal_Load(sender, e);*/
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
                 throw ex;
             }
+            
 
         }
         private void nuevoUsuario_Click(object sender, EventArgs e)
         {
             try
             {
+                openChildFormInPanel(new frmNuevoUsuario());
+                /*btnUsuarios.BackColor = Color.Silver;
                 frmNuevoUsuario ventanaNuevoUsuario = new frmNuevoUsuario();
-                ventanaNuevoUsuario.ShowDialog();
+                ventanaNuevoUsuario.ShowDialog();*/
             }
             catch (Exception ex)
             {
@@ -125,8 +168,10 @@ namespace Trabajo_Practico_PAV_I
         {
             try
             {
-                frmNuevoFormulario ventanaNuevoFormulario = new frmNuevoFormulario(usuario);
-                ventanaNuevoFormulario.ShowDialog();
+                openChildFormInPanel(new frmNuevoFormulario(usuario));
+                /*btnFormularios.BackColor = Color.Silver;*/
+                /*frmNuevoFormulario ventanaNuevoFormulario = new frmNuevoFormulario(usuario);
+                ventanaNuevoFormulario.ShowDialog();*/
             }
             catch (Exception ex)
             {
@@ -139,8 +184,10 @@ namespace Trabajo_Practico_PAV_I
         {
             try
             {
-                HistorialPermisos ventanaHistorialPermisos = new HistorialPermisos();
-                ventanaHistorialPermisos.ShowDialog();
+                openChildFormInPanel(new HistorialPermisos());
+               /*btnHistorialFormularios.BackColor = Color.Silver;*/
+                /*HistorialPermisos ventanaHistorialPermisos = new HistorialPermisos();
+                ventanaHistorialPermisos.ShowDialog();*/
             }
             catch (Exception ex)
             {
@@ -153,14 +200,39 @@ namespace Trabajo_Practico_PAV_I
         {
             try
             {
-                frmHistorialPerfilesUsuarios ventanaHistorialPerfilesUsuarios = new frmHistorialPerfilesUsuarios();
-                ventanaHistorialPerfilesUsuarios.ShowDialog();
+                openChildFormInPanel(new frmHistorialPerfilesUsuarios());
+                /*btnHistorialPerfiles.BackColor = Color.Silver;*/
+                /*frmHistorialPerfilesUsuarios ventanaHistorialPerfilesUsuarios = new frmHistorialPerfilesUsuarios();
+                ventanaHistorialPerfilesUsuarios.ShowDialog();*/
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexion con la Base de datos.");
                 throw ex;
             }
+        }
+
+        
+
+        private void usuariosPorPerfilToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                openChildFormInPanel(new frmUsXPerfil());
+                /*btnUsXPerfil.BackColor = Color.Silver;*/
+                /*frmUsXPerfil ventanaReporte = new frmUsXPerfil();
+                ventanaReporte.ShowDialog();*/
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
+            }
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            frmPrincipal_Load(sender, e);
         }
     }
 

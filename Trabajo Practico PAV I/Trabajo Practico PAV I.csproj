@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -56,22 +74,44 @@
     <Compile Include="Entidades\Bug.cs" />
     <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="GUI\frmHistorialPerfilesUsuarios.cs">
+    <Compile Include="GestionUsuariosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionUsuariosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmFormsAcces.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmHistorialPerfilesUsuarios.Designer.cs">
+    <Compile Include="GUI\frmFormsAcces.Designer.cs">
+      <DependentUpon>frmFormsAcces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Historiales\frmHistorialPerfilesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Historiales\frmHistorialPerfilesUsuarios.Designer.cs">
       <DependentUpon>frmHistorialPerfilesUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmNuevoFormulario.cs">
+    <Compile Include="GUI\Formularios\frmNuevoFormulario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmNuevoFormulario.Designer.cs">
+    <Compile Include="GUI\Formularios\frmNuevoFormulario.Designer.cs">
       <DependentUpon>frmNuevoFormulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmNuevoUsuario.cs">
+    <Compile Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsUsXPerfil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reportes\ReporteUsXPerfil\frmUsXPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmNuevoUsuario.Designer.cs">
+    <Compile Include="GUI\Reportes\ReporteUsXPerfil\frmUsXPerfil.Designer.cs">
+      <DependentUpon>frmUsXPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Usuarios\frmNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuarios\frmNuevoUsuario.Designer.cs">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmPrincipal.cs">
@@ -80,45 +120,53 @@
     <Compile Include="GUI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmLogin.cs">
+    <Compile Include="GUI\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmLogin.Designer.cs">
+    <Compile Include="GUI\Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmNuevoPerfil.cs">
+    <Compile Include="GUI\Perfiles\frmNuevoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmNuevoPerfil.Designer.cs">
+    <Compile Include="GUI\Perfiles\frmNuevoPerfil.Designer.cs">
       <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HistorialPermisos.cs">
+    <Compile Include="GUI\Historiales\HistorialPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HistorialPermisos.Designer.cs">
+    <Compile Include="GUI\Historiales\HistorialPermisos.Designer.cs">
       <DependentUpon>HistorialPermisos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\frmHistorialPerfilesUsuarios.resx">
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\frmFormsAcces.resx">
+      <DependentUpon>frmFormsAcces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Historiales\frmHistorialPerfilesUsuarios.resx">
       <DependentUpon>frmHistorialPerfilesUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmNuevoFormulario.resx">
+    <EmbeddedResource Include="GUI\Formularios\frmNuevoFormulario.resx">
       <DependentUpon>frmNuevoFormulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmNuevoUsuario.resx">
+    <EmbeddedResource Include="GUI\Reportes\ReporteUsXPerfil\frmUsXPerfil.resx">
+      <DependentUpon>frmUsXPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\ReporteUsXPerfil\rptUsXPerfil.rdlc" />
+    <EmbeddedResource Include="GUI\Usuarios\frmNuevoUsuario.resx">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmLogin.resx">
+    <EmbeddedResource Include="GUI\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmNuevoPerfil.resx">
+    <EmbeddedResource Include="GUI\Perfiles\frmNuevoPerfil.resx">
       <DependentUpon>frmNuevoPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HistorialPermisos.resx">
+    <EmbeddedResource Include="GUI\Historiales\HistorialPermisos.resx">
       <DependentUpon>HistorialPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -134,6 +182,29 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>appConfig.Designer.cs</LastGenOutput>
     </None>
+    <None Include="GestionUsuariosDataSet.xsc">
+      <DependentUpon>GestionUsuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionUsuariosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionUsuariosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionUsuariosDataSet.xss">
+      <DependentUpon>GestionUsuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.xsc">
+      <DependentUpon>DsUsXPerfil.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsUsXPerfil.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.xss">
+      <DependentUpon>DsUsXPerfil.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,6 +217,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

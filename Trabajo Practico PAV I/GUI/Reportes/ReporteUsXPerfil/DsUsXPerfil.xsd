@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsUsXPerfil" targetNamespace="http://tempuri.org/DsUsXPerfil.xsd" xmlns:mstns="http://tempuri.org/DsUsXPerfil.xsd" xmlns="http://tempuri.org/DsUsXPerfil.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-LDGCSE9\SQLEXPRESS;Initial Catalog=GestionUsuarios;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-ldgcse9\sqlexpress.GestionUsuarios.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtblUsXPerfilTableAdapter" GeneratorDataComponentClassName="dtblUsXPerfilTableAdapter" Name="dtblUsXPerfil" UserDataComponentName="dtblUsXPerfilTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="desktop-ldgcse9\sqlexpress.GestionUsuarios.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Usuarios.usuario, Usuarios.id_perfil, Usuarios.password, Usuarios.email, Usuarios.estado, Usuarios.borrado, Perfiles.nombre
+FROM            Usuarios INNER JOIN
+                         Perfiles ON Usuarios.id_perfil = Perfiles.id_perfil
+WHERE        (Usuarios.borrado = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="id_perfil" DataSetColumn="id_perfil" />
+              <Mapping SourceColumn="password" DataSetColumn="password" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="borrado" DataSetColumn="borrado" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsUsXPerfil" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsUsXPerfil" msprop:Generator_UserDSName="DsUsXPerfil">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblUsXPerfil" msprop:Generator_TableClassName="dtblUsXPerfilDataTable" msprop:Generator_TableVarName="tabledtblUsXPerfil" msprop:Generator_TablePropName="dtblUsXPerfil" msprop:Generator_RowDeletingName="dtblUsXPerfilRowDeleting" msprop:Generator_RowChangingName="dtblUsXPerfilRowChanging" msprop:Generator_RowEvHandlerName="dtblUsXPerfilRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblUsXPerfilRowDeleted" msprop:Generator_UserTableName="dtblUsXPerfil" msprop:Generator_RowChangedName="dtblUsXPerfilRowChanged" msprop:Generator_RowEvArgName="dtblUsXPerfilRowChangeEvent" msprop:Generator_RowClassName="dtblUsXPerfilRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_perfil" msprop:Generator_ColumnVarNameInTable="columnid_perfil" msprop:Generator_ColumnPropNameInRow="id_perfil" msprop:Generator_ColumnPropNameInTable="id_perfilColumn" msprop:Generator_UserColumnName="id_perfil" type="xs:int" />
+              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_UserColumnName="password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="borrado" msprop:Generator_ColumnVarNameInTable="columnborrado" msprop:Generator_ColumnPropNameInRow="borrado" msprop:Generator_ColumnPropNameInTable="borradoColumn" msprop:Generator_UserColumnName="borrado" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
