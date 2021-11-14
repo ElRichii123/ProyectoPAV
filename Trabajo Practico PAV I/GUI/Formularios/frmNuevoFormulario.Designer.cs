@@ -52,7 +52,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // lblPerfiles
             // 
             this.lblPerfiles.AutoSize = true;
-            this.lblPerfiles.Location = new System.Drawing.Point(102, 81);
+            this.lblPerfiles.Location = new System.Drawing.Point(474, 42);
             this.lblPerfiles.Name = "lblPerfiles";
             this.lblPerfiles.Size = new System.Drawing.Size(33, 13);
             this.lblPerfiles.TabIndex = 31;
@@ -61,7 +61,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // cmbPerfil
             // 
             this.cmbPerfil.FormattingEnabled = true;
-            this.cmbPerfil.Location = new System.Drawing.Point(141, 78);
+            this.cmbPerfil.Location = new System.Drawing.Point(513, 39);
             this.cmbPerfil.Name = "cmbPerfil";
             this.cmbPerfil.Size = new System.Drawing.Size(94, 21);
             this.cmbPerfil.TabIndex = 30;
@@ -76,7 +76,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnPermitirAcceso
             // 
-            this.btnPermitirAcceso.Location = new System.Drawing.Point(339, 37);
+            this.btnPermitirAcceso.Location = new System.Drawing.Point(191, 484);
             this.btnPermitirAcceso.Name = "btnPermitirAcceso";
             this.btnPermitirAcceso.Size = new System.Drawing.Size(113, 23);
             this.btnPermitirAcceso.TabIndex = 33;
@@ -86,7 +86,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnRemoverAcceso
             // 
-            this.btnRemoverAcceso.Location = new System.Drawing.Point(339, 76);
+            this.btnRemoverAcceso.Location = new System.Drawing.Point(359, 484);
             this.btnRemoverAcceso.Name = "btnRemoverAcceso";
             this.btnRemoverAcceso.Size = new System.Drawing.Size(113, 23);
             this.btnRemoverAcceso.TabIndex = 34;
@@ -101,18 +101,23 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.grdPermisos.AllowUserToResizeRows = false;
             this.grdPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdPermisos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdPermisos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdPermisos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdPermisos.Location = new System.Drawing.Point(141, 128);
+            this.grdPermisos.GridColor = System.Drawing.SystemColors.Control;
+            this.grdPermisos.Location = new System.Drawing.Point(32, 91);
             this.grdPermisos.Name = "grdPermisos";
             this.grdPermisos.ReadOnly = true;
-            this.grdPermisos.Size = new System.Drawing.Size(311, 192);
+            this.grdPermisos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.grdPermisos.Size = new System.Drawing.Size(650, 304);
             this.grdPermisos.TabIndex = 35;
             // 
             // frmNuevoFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 332);
+            this.ClientSize = new System.Drawing.Size(727, 529);
             this.Controls.Add(this.grdPermisos);
             this.Controls.Add(this.btnRemoverAcceso);
             this.Controls.Add(this.btnPermitirAcceso);

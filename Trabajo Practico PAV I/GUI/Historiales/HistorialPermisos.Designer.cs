@@ -31,6 +31,7 @@ namespace Trabajo_Practico_PAV_I
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialPermisos));
             this.grdHistorialPermisos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdHistorialPermisos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,18 +42,35 @@ namespace Trabajo_Practico_PAV_I
             this.grdHistorialPermisos.AllowUserToResizeRows = false;
             this.grdHistorialPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdHistorialPermisos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdHistorialPermisos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdHistorialPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdHistorialPermisos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdHistorialPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdHistorialPermisos.Location = new System.Drawing.Point(57, 12);
+            this.grdHistorialPermisos.GridColor = System.Drawing.SystemColors.Control;
+            this.grdHistorialPermisos.Location = new System.Drawing.Point(28, 44);
             this.grdHistorialPermisos.Name = "grdHistorialPermisos";
             this.grdHistorialPermisos.ReadOnly = true;
-            this.grdHistorialPermisos.Size = new System.Drawing.Size(392, 426);
+            this.grdHistorialPermisos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.grdHistorialPermisos.RowHeadersVisible = false;
+            this.grdHistorialPermisos.Size = new System.Drawing.Size(662, 473);
             this.grdHistorialPermisos.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(219, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 19);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Historial de Permisos de Formularios";
             // 
             // HistorialPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 450);
+            this.ClientSize = new System.Drawing.Size(727, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grdHistorialPermisos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistorialPermisos";
@@ -60,11 +78,13 @@ namespace Trabajo_Practico_PAV_I
             this.Load += new System.EventHandler(this.HistorialPermisos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdHistorialPermisos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView grdHistorialPermisos;
+        private System.Windows.Forms.Label label1;
     }
 }

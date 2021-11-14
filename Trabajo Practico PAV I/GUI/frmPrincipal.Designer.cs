@@ -39,36 +39,42 @@ namespace Trabajo_Practico_PAV_I
             this.pnlSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.btnHistorialFormularios = new System.Windows.Forms.Button();
             this.btnHistorialPerfiles = new System.Windows.Forms.Button();
-            this.btnFormularios = new System.Windows.Forms.Button();
             this.btnOperaciones = new System.Windows.Forms.Button();
             this.pnlSubMenuAdministrar = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnPerfiles = new System.Windows.Forms.Button();
             this.btnAdministrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pnlSubMenuReportes.SuspendLayout();
             this.pnlSubMenuOperaciones.SuspendLayout();
             this.pnlSubMenuAdministrar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 513);
+            this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblUsuario.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(0, 29);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(36, 13);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "label1";
             // 
             // lblPerfil
             // 
             this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Location = new System.Drawing.Point(44, 513);
+            this.lblPerfil.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblPerfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Location = new System.Drawing.Point(0, 42);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(35, 13);
+            this.lblPerfil.Size = new System.Drawing.Size(36, 13);
             this.lblPerfil.TabIndex = 2;
             this.lblPerfil.Text = "label1";
             // 
@@ -77,7 +83,7 @@ namespace Trabajo_Practico_PAV_I
             this.pnlSubMenuReportes.Controls.Add(this.button2);
             this.pnlSubMenuReportes.Controls.Add(this.btnUsXPerfil);
             this.pnlSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuReportes.Location = new System.Drawing.Point(3, 447);
+            this.pnlSubMenuReportes.Location = new System.Drawing.Point(3, 455);
             this.pnlSubMenuReportes.Name = "pnlSubMenuReportes";
             this.pnlSubMenuReportes.Size = new System.Drawing.Size(145, 63);
             this.pnlSubMenuReportes.TabIndex = 9;
@@ -119,7 +125,7 @@ namespace Trabajo_Practico_PAV_I
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 397);
+            this.button1.Location = new System.Drawing.Point(3, 405);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(145, 44);
@@ -133,11 +139,10 @@ namespace Trabajo_Practico_PAV_I
             // 
             this.pnlSubMenuOperaciones.Controls.Add(this.btnHistorialFormularios);
             this.pnlSubMenuOperaciones.Controls.Add(this.btnHistorialPerfiles);
-            this.pnlSubMenuOperaciones.Controls.Add(this.btnFormularios);
             this.pnlSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuOperaciones.Location = new System.Drawing.Point(3, 312);
+            this.pnlSubMenuOperaciones.Location = new System.Drawing.Point(3, 340);
             this.pnlSubMenuOperaciones.Name = "pnlSubMenuOperaciones";
-            this.pnlSubMenuOperaciones.Size = new System.Drawing.Size(145, 79);
+            this.pnlSubMenuOperaciones.Size = new System.Drawing.Size(145, 59);
             this.pnlSubMenuOperaciones.TabIndex = 7;
             // 
             // btnHistorialFormularios
@@ -146,7 +151,7 @@ namespace Trabajo_Practico_PAV_I
             this.btnHistorialFormularios.FlatAppearance.BorderSize = 0;
             this.btnHistorialFormularios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnHistorialFormularios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialFormularios.Location = new System.Drawing.Point(0, 50);
+            this.btnHistorialFormularios.Location = new System.Drawing.Point(0, 25);
             this.btnHistorialFormularios.Name = "btnHistorialFormularios";
             this.btnHistorialFormularios.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnHistorialFormularios.Size = new System.Drawing.Size(145, 25);
@@ -162,7 +167,7 @@ namespace Trabajo_Practico_PAV_I
             this.btnHistorialPerfiles.FlatAppearance.BorderSize = 0;
             this.btnHistorialPerfiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnHistorialPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialPerfiles.Location = new System.Drawing.Point(0, 25);
+            this.btnHistorialPerfiles.Location = new System.Drawing.Point(0, 0);
             this.btnHistorialPerfiles.Name = "btnHistorialPerfiles";
             this.btnHistorialPerfiles.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnHistorialPerfiles.Size = new System.Drawing.Size(145, 25);
@@ -172,34 +177,18 @@ namespace Trabajo_Practico_PAV_I
             this.btnHistorialPerfiles.UseVisualStyleBackColor = true;
             this.btnHistorialPerfiles.Click += new System.EventHandler(this.historialPerfilesDelUsuarioToolStripMenuItem_Click);
             // 
-            // btnFormularios
-            // 
-            this.btnFormularios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFormularios.FlatAppearance.BorderSize = 0;
-            this.btnFormularios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnFormularios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFormularios.Location = new System.Drawing.Point(0, 0);
-            this.btnFormularios.Name = "btnFormularios";
-            this.btnFormularios.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFormularios.Size = new System.Drawing.Size(145, 25);
-            this.btnFormularios.TabIndex = 5;
-            this.btnFormularios.Text = "Formularios";
-            this.btnFormularios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormularios.UseVisualStyleBackColor = true;
-            this.btnFormularios.Click += new System.EventHandler(this.nuevoFormulario_Click);
-            // 
             // btnOperaciones
             // 
             this.btnOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOperaciones.FlatAppearance.BorderSize = 0;
             this.btnOperaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnOperaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOperaciones.Location = new System.Drawing.Point(3, 262);
+            this.btnOperaciones.Location = new System.Drawing.Point(3, 290);
             this.btnOperaciones.Name = "btnOperaciones";
             this.btnOperaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnOperaciones.Size = new System.Drawing.Size(145, 44);
             this.btnOperaciones.TabIndex = 6;
-            this.btnOperaciones.Text = "Operaciones";
+            this.btnOperaciones.Text = "Historiales";
             this.btnOperaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOperaciones.UseVisualStyleBackColor = true;
             this.btnOperaciones.Click += new System.EventHandler(this.btnOperaciones_Click);
@@ -207,13 +196,30 @@ namespace Trabajo_Practico_PAV_I
             // pnlSubMenuAdministrar
             // 
             this.pnlSubMenuAdministrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSubMenuAdministrar.BackgroundImage")));
+            this.pnlSubMenuAdministrar.Controls.Add(this.button3);
             this.pnlSubMenuAdministrar.Controls.Add(this.btnUsuarios);
             this.pnlSubMenuAdministrar.Controls.Add(this.btnPerfiles);
             this.pnlSubMenuAdministrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAdministrar.Location = new System.Drawing.Point(3, 200);
             this.pnlSubMenuAdministrar.Name = "pnlSubMenuAdministrar";
-            this.pnlSubMenuAdministrar.Size = new System.Drawing.Size(139, 56);
+            this.pnlSubMenuAdministrar.Size = new System.Drawing.Size(139, 84);
             this.pnlSubMenuAdministrar.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 50);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(139, 25);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Formularios";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.nuevoFormulario_Click);
             // 
             // btnUsuarios
             // 
@@ -283,13 +289,21 @@ namespace Trabajo_Practico_PAV_I
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuOperaciones);
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuReportes);
-            this.flowLayoutPanel1.Controls.Add(this.lblUsuario);
-            this.flowLayoutPanel1.Controls.Add(this.lblPerfil);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 571);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 601);
             this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Controls.Add(this.lblPerfil);
+            this.panel2.Location = new System.Drawing.Point(3, 524);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(145, 55);
+            this.panel2.TabIndex = 10;
             // 
             // panelChildForm
             // 
@@ -304,7 +318,8 @@ namespace Trabajo_Practico_PAV_I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(909, 566);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(908, 601);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -317,7 +332,8 @@ namespace Trabajo_Practico_PAV_I
             this.pnlSubMenuOperaciones.ResumeLayout(false);
             this.pnlSubMenuAdministrar.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -332,7 +348,6 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.Panel pnlSubMenuOperaciones;
         private System.Windows.Forms.Button btnHistorialFormularios;
         private System.Windows.Forms.Button btnHistorialPerfiles;
-        private System.Windows.Forms.Button btnFormularios;
         private System.Windows.Forms.Button btnOperaciones;
         private System.Windows.Forms.Panel pnlSubMenuAdministrar;
         private System.Windows.Forms.Button btnUsuarios;
@@ -341,6 +356,8 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

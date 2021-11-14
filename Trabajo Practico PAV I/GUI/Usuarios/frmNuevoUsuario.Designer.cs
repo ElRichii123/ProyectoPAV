@@ -66,7 +66,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnConsultarUsuario
             // 
-            this.btnConsultarUsuario.Location = new System.Drawing.Point(38, 360);
+            this.btnConsultarUsuario.Location = new System.Drawing.Point(38, 494);
             this.btnConsultarUsuario.Name = "btnConsultarUsuario";
             this.btnConsultarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnConsultarUsuario.TabIndex = 6;
@@ -76,7 +76,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnActualizarUsuario
             // 
-            this.btnActualizarUsuario.Location = new System.Drawing.Point(205, 360);
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(236, 494);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnActualizarUsuario.TabIndex = 7;
@@ -86,7 +86,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnAgregarUsuario
             // 
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(371, 360);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(436, 494);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnAgregarUsuario.TabIndex = 8;
@@ -96,7 +96,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(514, 360);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(594, 494);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(102, 23);
             this.btnEliminarUsuario.TabIndex = 9;
@@ -111,11 +111,16 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.grdUsuarios.AllowUserToResizeRows = false;
             this.grdUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdUsuarios.Location = new System.Drawing.Point(38, 113);
+            this.grdUsuarios.GridColor = System.Drawing.SystemColors.Control;
+            this.grdUsuarios.Location = new System.Drawing.Point(38, 93);
             this.grdUsuarios.Name = "grdUsuarios";
             this.grdUsuarios.ReadOnly = true;
-            this.grdUsuarios.Size = new System.Drawing.Size(578, 176);
+            this.grdUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.grdUsuarios.Size = new System.Drawing.Size(658, 382);
             this.grdUsuarios.TabIndex = 10;
             this.grdUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUsuarios_CellClick);
             // 
@@ -192,7 +197,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 442);
+            this.ClientSize = new System.Drawing.Size(727, 529);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.lblPerfiles);

@@ -45,7 +45,7 @@ namespace Trabajo_Practico_PAV_I
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(18, 40);
+            this.lblTitulo.Location = new System.Drawing.Point(40, 43);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(90, 13);
             this.lblTitulo.TabIndex = 0;
@@ -58,17 +58,22 @@ namespace Trabajo_Practico_PAV_I
             this.grdPerfiles.AllowUserToResizeRows = false;
             this.grdPerfiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdPerfiles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdPerfiles.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdPerfiles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdPerfiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdPerfiles.Location = new System.Drawing.Point(237, 37);
+            this.grdPerfiles.GridColor = System.Drawing.SystemColors.Control;
+            this.grdPerfiles.Location = new System.Drawing.Point(43, 85);
             this.grdPerfiles.Name = "grdPerfiles";
             this.grdPerfiles.ReadOnly = true;
-            this.grdPerfiles.Size = new System.Drawing.Size(216, 161);
+            this.grdPerfiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.grdPerfiles.Size = new System.Drawing.Size(651, 361);
             this.grdPerfiles.TabIndex = 8;
             this.grdPerfiles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdBugs_CellClick);
             // 
             // btnAgregarBug
             // 
-            this.btnAgregarBug.Location = new System.Drawing.Point(21, 146);
+            this.btnAgregarBug.Location = new System.Drawing.Point(393, 484);
             this.btnAgregarBug.Name = "btnAgregarBug";
             this.btnAgregarBug.Size = new System.Drawing.Size(102, 23);
             this.btnAgregarBug.TabIndex = 11;
@@ -78,7 +83,7 @@ namespace Trabajo_Practico_PAV_I
             // 
             // btnActualizarBug
             // 
-            this.btnActualizarBug.Location = new System.Drawing.Point(21, 117);
+            this.btnActualizarBug.Location = new System.Drawing.Point(214, 484);
             this.btnActualizarBug.Name = "btnActualizarBug";
             this.btnActualizarBug.Size = new System.Drawing.Size(102, 23);
             this.btnActualizarBug.TabIndex = 19;
@@ -88,14 +93,14 @@ namespace Trabajo_Practico_PAV_I
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(114, 37);
+            this.txtNombre.Location = new System.Drawing.Point(136, 40);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(94, 20);
+            this.txtNombre.Size = new System.Drawing.Size(558, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // btnConsultarPerfil
             // 
-            this.btnConsultarPerfil.Location = new System.Drawing.Point(21, 88);
+            this.btnConsultarPerfil.Location = new System.Drawing.Point(43, 484);
             this.btnConsultarPerfil.Name = "btnConsultarPerfil";
             this.btnConsultarPerfil.Size = new System.Drawing.Size(102, 23);
             this.btnConsultarPerfil.TabIndex = 20;
@@ -105,7 +110,7 @@ namespace Trabajo_Practico_PAV_I
             // 
             // btnEliminarPerfil
             // 
-            this.btnEliminarPerfil.Location = new System.Drawing.Point(21, 175);
+            this.btnEliminarPerfil.Location = new System.Drawing.Point(592, 484);
             this.btnEliminarPerfil.Name = "btnEliminarPerfil";
             this.btnEliminarPerfil.Size = new System.Drawing.Size(102, 23);
             this.btnEliminarPerfil.TabIndex = 21;
@@ -118,7 +123,7 @@ namespace Trabajo_Practico_PAV_I
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 249);
+            this.ClientSize = new System.Drawing.Size(727, 529);
             this.Controls.Add(this.btnEliminarPerfil);
             this.Controls.Add(this.btnConsultarPerfil);
             this.Controls.Add(this.btnActualizarBug);
