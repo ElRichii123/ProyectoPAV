@@ -39,13 +39,14 @@ namespace Trabajo_Practico_PAV_I
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnConsultarPerfil = new System.Windows.Forms.Button();
             this.btnEliminarPerfil = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdPerfiles)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(40, 43);
+            this.lblTitulo.Location = new System.Drawing.Point(40, 50);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(90, 13);
             this.lblTitulo.TabIndex = 0;
@@ -63,7 +64,7 @@ namespace Trabajo_Practico_PAV_I
             this.grdPerfiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.grdPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPerfiles.GridColor = System.Drawing.SystemColors.Control;
-            this.grdPerfiles.Location = new System.Drawing.Point(43, 85);
+            this.grdPerfiles.Location = new System.Drawing.Point(43, 92);
             this.grdPerfiles.Name = "grdPerfiles";
             this.grdPerfiles.ReadOnly = true;
             this.grdPerfiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -93,7 +94,7 @@ namespace Trabajo_Practico_PAV_I
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(136, 40);
+            this.txtNombre.Location = new System.Drawing.Point(136, 47);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(558, 20);
             this.txtNombre.TabIndex = 2;
@@ -118,12 +119,23 @@ namespace Trabajo_Practico_PAV_I
             this.btnEliminarPerfil.UseVisualStyleBackColor = true;
             this.btnEliminarPerfil.Click += new System.EventHandler(this.btnEliminarPerfil_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(310, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 19);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Perfiles";
+            // 
             // frmNuevoPerfil
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminarPerfil);
             this.Controls.Add(this.btnConsultarPerfil);
             this.Controls.Add(this.btnActualizarBug);
@@ -155,5 +167,6 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnConsultarPerfil;
         private System.Windows.Forms.Button btnEliminarPerfil;
+        private System.Windows.Forms.Label label1;
     }
 }

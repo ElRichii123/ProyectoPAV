@@ -37,13 +37,14 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.btnPermitirAcceso = new System.Windows.Forms.Button();
             this.btnRemoverAcceso = new System.Windows.Forms.Button();
             this.grdPermisos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdPermisos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(20, 42);
+            this.lblTitulo.Location = new System.Drawing.Point(20, 67);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(115, 13);
             this.lblTitulo.TabIndex = 3;
@@ -52,7 +53,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // lblPerfiles
             // 
             this.lblPerfiles.AutoSize = true;
-            this.lblPerfiles.Location = new System.Drawing.Point(474, 42);
+            this.lblPerfiles.Location = new System.Drawing.Point(474, 67);
             this.lblPerfiles.Name = "lblPerfiles";
             this.lblPerfiles.Size = new System.Drawing.Size(33, 13);
             this.lblPerfiles.TabIndex = 31;
@@ -61,7 +62,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // cmbPerfil
             // 
             this.cmbPerfil.FormattingEnabled = true;
-            this.cmbPerfil.Location = new System.Drawing.Point(513, 39);
+            this.cmbPerfil.Location = new System.Drawing.Point(513, 64);
             this.cmbPerfil.Name = "cmbPerfil";
             this.cmbPerfil.Size = new System.Drawing.Size(94, 21);
             this.cmbPerfil.TabIndex = 30;
@@ -69,7 +70,7 @@ namespace Trabajo_Practico_PAV_I.GUI
             // cmbNombreForm
             // 
             this.cmbNombreForm.FormattingEnabled = true;
-            this.cmbNombreForm.Location = new System.Drawing.Point(141, 39);
+            this.cmbNombreForm.Location = new System.Drawing.Point(141, 64);
             this.cmbNombreForm.Name = "cmbNombreForm";
             this.cmbNombreForm.Size = new System.Drawing.Size(94, 21);
             this.cmbNombreForm.TabIndex = 32;
@@ -113,11 +114,22 @@ namespace Trabajo_Practico_PAV_I.GUI
             this.grdPermisos.Size = new System.Drawing.Size(650, 304);
             this.grdPermisos.TabIndex = 35;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(279, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 19);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Formularios";
+            // 
             // frmNuevoFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grdPermisos);
             this.Controls.Add(this.btnRemoverAcceso);
             this.Controls.Add(this.btnPermitirAcceso);
@@ -144,5 +156,6 @@ namespace Trabajo_Practico_PAV_I.GUI
         private System.Windows.Forms.Button btnPermitirAcceso;
         private System.Windows.Forms.Button btnRemoverAcceso;
         private System.Windows.Forms.DataGridView grdPermisos;
+        private System.Windows.Forms.Label label1;
     }
 }

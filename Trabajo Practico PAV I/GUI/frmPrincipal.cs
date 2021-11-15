@@ -40,17 +40,37 @@ namespace Trabajo_Practico_PAV_I
             else
                 subMenu.Visible = false;
         }
-
+        private Button MenuUsado = null;
         private void btnAdministrar_Click(object sender, EventArgs e)
         {
+           
+            if (MenuUsado != null)
+            {
+                MenuUsado.BackColor = SystemColors.Control;
+                
+            }
+            btnAdministrar.BackColor = Color.Gray;
+            MenuUsado = btnAdministrar;
             showSubMenu(pnlSubMenuAdministrar);
         }
         private void btnOperaciones_Click(object sender, EventArgs e)
         {
+            if (MenuUsado != null)
+            {
+                MenuUsado.BackColor = SystemColors.Control;
+            }
+            btnOperaciones.BackColor = Color.Gray;
+            MenuUsado = btnOperaciones;
             showSubMenu(pnlSubMenuOperaciones);
         }
         private void btnReportes_Click(object sender, EventArgs e)
         {
+            if (MenuUsado != null)
+            {
+                MenuUsado.BackColor = SystemColors.Control;
+            }
+            btnReportes.BackColor = Color.Gray;
+            MenuUsado = btnReportes;
             showSubMenu(pnlSubMenuReportes);
         }
 
@@ -232,6 +252,11 @@ namespace Trabajo_Practico_PAV_I
 
         private void panel1_Click(object sender, EventArgs e)
         {
+            if (MenuUsado != null)
+            {
+                MenuUsado.BackColor = SystemColors.Control;
+            }
+            hideSubMenu();
             frmPrincipal_Load(sender, e);
         }
 

@@ -35,7 +35,7 @@ namespace Trabajo_Practico_PAV_I
             this.pnlSubMenuReportes = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnUsXPerfil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.pnlSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.btnHistorialFormularios = new System.Windows.Forms.Button();
             this.btnHistorialPerfiles = new System.Windows.Forms.Button();
@@ -119,21 +119,21 @@ namespace Trabajo_Practico_PAV_I
             this.btnUsXPerfil.UseVisualStyleBackColor = true;
             this.btnUsXPerfil.Click += new System.EventHandler(this.usuariosPorPerfilToolStripMenuItem_Click_1);
             // 
-            // button1
+            // btnReportes
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 405);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(145, 44);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Reportes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnReportes_Click);
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Location = new System.Drawing.Point(3, 405);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(145, 44);
+            this.btnReportes.TabIndex = 8;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // pnlSubMenuOperaciones
             // 
@@ -255,6 +255,7 @@ namespace Trabajo_Practico_PAV_I
             // 
             // btnAdministrar
             // 
+            this.btnAdministrar.BackColor = System.Drawing.SystemColors.Control;
             this.btnAdministrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdministrar.FlatAppearance.BorderSize = 0;
             this.btnAdministrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -266,7 +267,7 @@ namespace Trabajo_Practico_PAV_I
             this.btnAdministrar.TabIndex = 1;
             this.btnAdministrar.Text = "Administrar";
             this.btnAdministrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrar.UseVisualStyleBackColor = true;
+            this.btnAdministrar.UseVisualStyleBackColor = false;
             this.btnAdministrar.Click += new System.EventHandler(this.btnAdministrar_Click);
             // 
             // panel1
@@ -287,7 +288,7 @@ namespace Trabajo_Practico_PAV_I
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuAdministrar);
             this.flowLayoutPanel1.Controls.Add(this.btnOperaciones);
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuOperaciones);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.btnReportes);
             this.flowLayoutPanel1.Controls.Add(this.pnlSubMenuReportes);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -344,7 +345,7 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.Panel pnlSubMenuReportes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnUsXPerfil;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel pnlSubMenuOperaciones;
         private System.Windows.Forms.Button btnHistorialFormularios;
         private System.Windows.Forms.Button btnHistorialPerfiles;
