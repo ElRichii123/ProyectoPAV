@@ -164,3 +164,4 @@ C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\bin\Debu
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CopyComplete
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReporteUsXPerfil.frmUsXPerfil.resources
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmFormsAcces.resources
+C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReportePerfilesXForm.frmPerfilesXForm.resources

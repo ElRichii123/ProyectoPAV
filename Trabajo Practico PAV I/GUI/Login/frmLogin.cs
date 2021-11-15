@@ -47,7 +47,10 @@ namespace Trabajo_Practico_PAV_I
                 }
                 catch(Exception ex)
                 {
+                    
                     MessageBox.Show("Error de conexion con la Base de datos.");
+                    throw ex;
+
                 }
             }
         }

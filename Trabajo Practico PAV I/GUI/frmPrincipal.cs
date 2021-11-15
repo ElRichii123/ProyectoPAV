@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_Practico_PAV_I.Entidades;
 using Trabajo_Practico_PAV_I.GUI;
+using Trabajo_Practico_PAV_I.GUI.Reportes.ReportePerfilesXForm;
 using Trabajo_Practico_PAV_I.GUI.Reportes.ReporteUsXPerfil;
 
 namespace Trabajo_Practico_PAV_I
@@ -260,7 +261,18 @@ namespace Trabajo_Practico_PAV_I
             frmPrincipal_Load(sender, e);
         }
 
-        
+        private void btnPerfilesXFormulario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                openChildFormInPanel(new frmPerfilesXForm());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion con la Base de datos.");
+                throw ex;
+            }
+        }
     }
 
 }

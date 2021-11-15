@@ -76,22 +76,35 @@ namespace Trabajo_Practico_PAV_I.GUI
             parametros.Add("fecha", a);
             try
             {
-                string consultaSql = "INSERT INTO Permisos (id_formulario,id_perfil,borrado) VALUES (@id_formulario,@id_perfil,@borrado)";
-                int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
+                string consultaTest = "Select F.id_formulario ,PP.id_perfil from Permisos P JOIN Formularios F ON P.id_formulario = F.id_formulario JOIN Perfiles PP ON p.id_perfil = PP.id_perfil WHERE P.borrado = 0 AND F.id_formulario = @id_formulario and PP.id_perfil = @id_perfil";
 
-                string consultaSql2 = "INSERT INTO HistorialPermisos (id_formulario,id_perfil,fecha,estado) VALUES (@id_formulario,@id_perfil,@fecha,'ACTIVO')";
-                int resultado2 = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql2, parametros);
-
-                if (resultado == 0 || resultado2 == 0)
+                DataTable test = DataManager.GetInstance().ConsultaSQL(consultaTest, parametros);
+                if (test.Rows.Count == 0)
                 {
-                    MessageBox.Show("Error al cargar el Permiso.");
+
+
+
+                    string consultaSql = "INSERT INTO Permisos (id_formulario,id_perfil,borrado) VALUES (@id_formulario,@id_perfil,@borrado)";
+                    int resultado = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql, parametros);
+
+                    string consultaSql2 = "INSERT INTO HistorialPermisos (id_formulario,id_perfil,fecha,estado) VALUES (@id_formulario,@id_perfil,@fecha,'ACTIVO')";
+                    int resultado2 = DataManager.GetInstance().EjecutarSQLTransaccion(consultaSql2, parametros);
+
+                    if (resultado == 0 || resultado2 == 0)
+                    {
+                        MessageBox.Show("Error al cargar el Permiso.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Carga exitosa del Permiso.");
+                        CargarGrilla();
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Carga exitosa del Permiso.");
-                    CargarGrilla();
-                    
-                    return;
+                    /* Ya existe el permiso*/
+                    MessageBox.Show("Error al cargar el Permiso. Este permiso ya existe");
                 }
             }
             catch (Exception ex)

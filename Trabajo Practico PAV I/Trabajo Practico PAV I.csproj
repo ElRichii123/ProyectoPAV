@@ -97,6 +97,20 @@
     <Compile Include="GUI\Formularios\frmNuevoFormulario.Designer.cs">
       <DependentUpon>frmNuevoFormulario.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Reportes\ReportePerfilesXForm\DsPerfilesXForm.cs">
+      <DependentUpon>DsPerfilesXForm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reportes\ReportePerfilesXForm\DsPerfilesXForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPerfilesXForm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reportes\ReportePerfilesXForm\frmPerfilesXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reportes\ReportePerfilesXForm\frmPerfilesXForm.Designer.cs">
+      <DependentUpon>frmPerfilesXForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,6 +164,10 @@
     <EmbeddedResource Include="GUI\Formularios\frmNuevoFormulario.resx">
       <DependentUpon>frmNuevoFormulario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\ReportePerfilesXForm\frmPerfilesXForm.resx">
+      <DependentUpon>frmPerfilesXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\ReportePerfilesXForm\rptPerfilesXForm.rdlc" />
     <EmbeddedResource Include="GUI\Reportes\ReporteUsXPerfil\frmUsXPerfil.resx">
       <DependentUpon>frmUsXPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +210,17 @@
     </None>
     <None Include="GestionUsuariosDataSet.xss">
       <DependentUpon>GestionUsuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Reportes\ReportePerfilesXForm\DsPerfilesXForm.xsc">
+      <DependentUpon>DsPerfilesXForm.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Reportes\ReportePerfilesXForm\DsPerfilesXForm.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPerfilesXForm.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\Reportes\ReportePerfilesXForm\DsPerfilesXForm.xss">
+      <DependentUpon>DsPerfilesXForm.xsd</DependentUpon>
     </None>
     <None Include="GUI\Reportes\ReporteUsXPerfil\DsUsXPerfil.xsc">
       <DependentUpon>DsUsXPerfil.xsd</DependentUpon>

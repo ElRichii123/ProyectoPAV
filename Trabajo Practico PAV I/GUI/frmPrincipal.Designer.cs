@@ -33,7 +33,7 @@ namespace Trabajo_Practico_PAV_I
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.pnlSubMenuReportes = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPerfilesXFormulario = new System.Windows.Forms.Button();
             this.btnUsXPerfil = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.pnlSubMenuOperaciones = new System.Windows.Forms.Panel();
@@ -80,28 +80,29 @@ namespace Trabajo_Practico_PAV_I
             // 
             // pnlSubMenuReportes
             // 
-            this.pnlSubMenuReportes.Controls.Add(this.button2);
+            this.pnlSubMenuReportes.Controls.Add(this.btnPerfilesXFormulario);
             this.pnlSubMenuReportes.Controls.Add(this.btnUsXPerfil);
             this.pnlSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuReportes.Location = new System.Drawing.Point(3, 455);
             this.pnlSubMenuReportes.Name = "pnlSubMenuReportes";
-            this.pnlSubMenuReportes.Size = new System.Drawing.Size(145, 63);
+            this.pnlSubMenuReportes.Size = new System.Drawing.Size(145, 77);
             this.pnlSubMenuReportes.TabIndex = 9;
             // 
-            // button2
+            // btnPerfilesXFormulario
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 25);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(145, 25);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Reporte2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPerfilesXFormulario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfilesXFormulario.FlatAppearance.BorderSize = 0;
+            this.btnPerfilesXFormulario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnPerfilesXFormulario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfilesXFormulario.Location = new System.Drawing.Point(0, 25);
+            this.btnPerfilesXFormulario.Name = "btnPerfilesXFormulario";
+            this.btnPerfilesXFormulario.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPerfilesXFormulario.Size = new System.Drawing.Size(145, 49);
+            this.btnPerfilesXFormulario.TabIndex = 6;
+            this.btnPerfilesXFormulario.Text = "Perfiles por Formulario";
+            this.btnPerfilesXFormulario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfilesXFormulario.UseVisualStyleBackColor = true;
+            this.btnPerfilesXFormulario.Click += new System.EventHandler(this.btnPerfilesXFormulario_Click);
             // 
             // btnUsXPerfil
             // 
@@ -301,7 +302,7 @@ namespace Trabajo_Practico_PAV_I
             // 
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.lblPerfil);
-            this.panel2.Location = new System.Drawing.Point(3, 524);
+            this.panel2.Location = new System.Drawing.Point(3, 538);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 55);
             this.panel2.TabIndex = 10;
@@ -343,7 +344,7 @@ namespace Trabajo_Practico_PAV_I
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.Panel pnlSubMenuReportes;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPerfilesXFormulario;
         private System.Windows.Forms.Button btnUsXPerfil;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel pnlSubMenuOperaciones;
