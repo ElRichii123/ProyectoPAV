@@ -165,3 +165,89 @@ C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debu
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReporteUsXPerfil.frmUsXPerfil.resources
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmFormsAcces.resources
 C:\Users\usuario\Source\Repos\GrupoPaezMartinez1\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReportePerfilesXForm.frmPerfilesXForm.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe.config
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Trabajo Practico PAV I.pdb
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\EnvDTE.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\stdole.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\Microsoft.MSXML.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csprojAssemblyReference.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmFormsAcces.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmHistorialPerfilesUsuarios.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoFormulario.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReportePerfilesXForm.frmPerfilesXForm.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.Reportes.ReporteUsXPerfil.frmUsXPerfil.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.GUI.frmNuevoUsuario.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmPrincipal.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmLogin.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.frmNuevoPerfil.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.HistorialPermisos.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo_Practico_PAV_I.Properties.Resources.resources
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.GenerateResource.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CoreCompileInputs.cache
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.csproj.CopyComplete
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.exe
+C:\Users\juans\Source\Repos\GrupoPaezMartinez2\Trabajo Practico PAV I\obj\Debug\Trabajo Practico PAV I.pdb
